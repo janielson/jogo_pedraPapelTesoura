@@ -1,15 +1,55 @@
 body {
-    animation: background-image 5s infinite linear;
-    transition: background-image 5s;
+  animation: background-image 20s infinite linear;
+
+}
+
+img {
+  width: 150px;
+  height: 150px;
+}
+
+@keyframes background-image {
+
+  0% {
+    background-image: url("./assets/background2.jpg")
   }
-    
-  
-  
-  @keyframes background-image {
-    0% {
-      background-image: url("./assets/background1.jpg");
-    }
-    100% {
-      background-image: url("./assets/background2.jpg");
-    }
+  10% {
+    background-image: url("./assets/background1.jpg");
   }
+
+  20% {
+    background-image: url("./assets/background2.jpg");
+  }
+
+  30% {
+    background-image: url("./assets/background3.jpg");
+  }
+
+  40% {
+    background-image: url("./assets/background4.jpg");
+  }
+
+  50% {
+    background-image: url("./assets/background5.jpg");
+  }
+
+  60% {
+    background-image: url("./assets/background6.jpg");
+  }
+
+  70% {
+    background-image: url("./assets/background7.jpg");
+  }
+
+  80% {
+    background-image: url("./assets/background8.jpg");
+  }
+
+  90% {
+    background-image: url("./assets/background9.jpg");
+  }
+
+  100% {
+    background-image: url("./assets/background10.jpg");
+  }
+}
