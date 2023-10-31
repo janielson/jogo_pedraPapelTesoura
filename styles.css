@@ -1,0 +1,15 @@
+body {
+    animation: background-image 5s infinite linear;
+    transition: background-image 5s;
+  }
+    
+  
+  
+  @keyframes background-image {
+    0% {
+      background-image: url("./assets/background1.jpg");
+    }
+    100% {
+      background-image: url("./assets/background2.jpg");
+    }
+  }
