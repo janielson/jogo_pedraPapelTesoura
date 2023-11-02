@@ -1,89 +1,51 @@
-.title-project {
-  display: flex;
-  flex-direction: column;
-  margin-top: 100px;
-  margin-left: 100px;
+
+.title-project{
+  position: absolute;
+  top: 0;
+  left: 25%;
+  padding-top: 10px;
+  padding-left: 36px;
+  word-spacing: 70px;
 }
 
-.neon-text-title1 {
-  word-spacing: 85px;
-  font-size: 65px;
-  font-family: 'Roboto Slab', serif;
+.title__project-title-img{
+  position: absolute;
+  height: 170px;
+  top:-34%;
+  left: 20%;
+  
+}
+
+.title__project-title-titletow{
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  font-size: 3.4rem;
   font-style: italic;
-  font-weight: 700;
-  color: #ffffff;
-  text-shadow:
-  0 0 5px #fe0505,
-  0 0 10px #f80404,
-  0 0 20px #fd0303,
-  0 0 40px rgb(0, 255, 251),
-  0 0 80px rgb(0, 255, 251),
-  0 0 90px rgb(0, 255, 251),
-  0 0 100px rgb(0, 255, 251),
-  0 0 150px rgb(0, 255, 251);
-
+  font-family: 'Permanent Marker', cursive;
 
 }
 
-.neon-text-title2 {
-  position: relative;
-  bottom: 199px;
-  left: 472px;
-  font-size: 65px;
-  font-family: 'Roboto Slab', serif;
+.title__project-title{
+  position: relative ;
+  color:#000;
+  font-size: 3.4rem;
+  font-family: 'Permanent Marker', cursive;
   font-style: italic;
-  font-weight: 700;
-  color: #ffffff;
-  text-shadow:
-  0 0 5px #fe0505,
-  0 0 10px #f80404,
-  0 0 20px #fd0303,
-  0 0 40px rgb(0, 255, 251),
-  0 0 80px rgb(0, 255, 251),
-  0 0 90px rgb(0, 255, 251),
-  0 0 100px rgb(0, 255, 251),
-  0 0 150px rgb(0, 255, 251);
-
+  margin-bottom: 10px;
 }
 
-.neon-text-title1 .neon__text__title-dalay1{
-  animation-delay: 0.8s;
-}
-.neon-text-title1 .neon__text__title-dalay2{
-  animation-delay: 1.4s;
-}
-.neon-text-title2 .neon-text-title3{
-  animation-delay: 1.8s;
-}
-.neon-text-title1 .neon-text-title2 span {
-  animation: animation 800ms linear ;
-}
 
-@keyframes animation {
-  0%{opacity: 0;}
-  10%{opacity: 1;}
-  20%{opacity: 0;}
-  40%{opacity: 1;}
-  50%{opacity: 0;}
-  60%{opacity: 1;}
-  80%{opacity: 0;}
-  100%{opacity: 1;}
-
-}
-
-.title-project img {
+.content-central{
   position: relative;
-  bottom: 115px;
-  left: 263px;
-  width: 370px;
-  height: 178px;
 }
 
 .content-central video {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+
 }
 
 @media(min-aspect-ratio: 16/9) {

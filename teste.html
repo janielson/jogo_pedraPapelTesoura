@@ -1,0 +1,25 @@
+<html>
+<head>
+  <title>Botão de arrastar</title>
+</head>
+<body>
+  <button draggable="true">Abrir</button>
+  <div id="conteudo">
+    <h1>Conteúdo da div</h1>
+    <p>Este é o conteúdo da div que será exibida ao arrastar o botão.</p>
+  </div>
+
+  <script>
+    function onDragStart(event) {
+      event.dataTransfer.setDragImage(document.getElementById("conteudo"), 0, 0);
+    }
+
+    function onDrop(event) {
+      document.getElementById("conteudo").style.display = "visible";
+    }
+
+    document.getElementById("botao").addEventListener("dragstart", onDragStart);
+    document.getElementById("conteudo").addEventListener("drop", onDrop);
+  </script>
+</body>
+</html>
