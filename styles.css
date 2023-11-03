@@ -16,9 +16,13 @@ body {
 }
 
 .img-background-aplication-logo {
-  height: 66px;
+  height: 76px;
   margin-top: 32px;
   margin-left: 32px;
+  border: 1px solid #00ffcb;
+  padding: 10px;
+  border-radius: 30px 1px 30px 1px;
+  box-shadow: 0 0 30px rgba(0, 255, 203, 0.7);
 }
 
 .content-paper-stone-scissors-paragraph-button {
@@ -42,22 +46,70 @@ body {
 
 .content-jogo{
   background: rgba(255, 255, 255, 0.2); 
-  backdrop-filter: blur(10px);
-  width: 40%;
+  width: 88%;
   margin: 0 auto;
+  border-radius: 20px 1px 20px 1px;
+  box-shadow: 0 0 30px rgba(0, 255, 203, 0.7);
 }
 
 .content-jogo-imgs img{
  height: 200px;
+ margin-top: 40px;
 
+
+}
+.content-jogo-imgs{
+  display: flex;
+  justify-content: center;
+  gap: 100px;
 
 }
 
 .content-jogo-imgs__button{
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 
+.content-jogo-boasorte{
+  text-align: center;
+  color: #00ffcb;
+}
+
+
+.content-jogo-result{
+  display: block;
+  color: #fb0000;
+  font-size: 20px;
+  margin-top: 100px;
+  text-align: start;
+  margin-left: 30px;
+  
+
+}
+
+.content-results-jogadas{
+  display:flex ;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 50px;
+}
+
+
+
+.content-jogo-boasorte-jogadas{
+  background: rgba(142, 242, 242, 0.068);
+  width: 250px;
+  height: 100px;
+  padding: 10px;
+  border-radius: 20px 1px 20px 1px;
+  text-align: center;
+ 
+
+  
+
+
+}
 
 
 
@@ -72,7 +124,8 @@ body {
 .wrap {
   margin: 0 auto;
   width: fit-content;
-  margin-top: 110px;
+  margin-top: 57px;
+  margin-bottom: 50px;
 }
 
 .button {
@@ -92,7 +145,7 @@ body {
   );
   border: none;
   border-radius: 1000px;
-  box-shadow: 12px 12px 24px rgba(79, 209, 197, 0.64);
+  box-shadow: 1px 6px 18px rgba(79, 209, 197, 0.64);
   transition: all 0.3s ease-in-out 0s;
   cursor: pointer;
   outline: none;
@@ -100,31 +153,6 @@ body {
   padding: 10px;
 }
 
-button::before {
-  content: "";
-  border-radius: 1000px;
-  min-width: calc(300px + 12px);
-  min-height: calc(60px + 12px);
-  border: 6px solid #00ffcb;
-  box-shadow: 0 0 60px rgba(0, 255, 203, 0.64);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: all 0.3s ease-in-out 0s;
-}
-
-.button:hover,
-.button:focus {
-  color: #313133;
-  transform: translateY(-6px);
-}
-
-button:hover::before,
-button:focus::before {
-  opacity: 1;
-}
 
 button::after {
   content: "";
