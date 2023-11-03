@@ -33,93 +33,85 @@ body {
   font-size: 32px;
 }
 
-
-.content-jogo_imgs{
+.content-jogo_imgs {
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
   margin: 0 auto;
   margin-top: 30px;
   border-radius: 18px;
   width: 50%;
-  
 }
 
-.content-jogo{
-  background: rgba(255, 255, 255, 0.2); 
+.content-jogo {
+  background: rgba(255, 255, 255, 0.2);
   width: 88%;
   margin: 0 auto;
   border-radius: 20px 1px 20px 1px;
   box-shadow: 0 0 30px rgba(0, 255, 203, 0.7);
+  margin-bottom: 50px;
+  padding: 20px;
 }
 
-.content-jogo-imgs img{
- height: 200px;
- margin-top: 40px;
-
-
+.content-jogo-imgs img {
+  height: 200px;
+  margin-top: 40px;
 }
-.content-jogo-imgs{
+.content-jogo-imgs {
   display: flex;
   justify-content: center;
   gap: 100px;
-
 }
 
-.content-jogo-imgs__button{
+.content__jogo__imgs__button__one,
+.content__jogo__imgs__button__tow,
+.content__jogo__imgs__button__three {
   background-color: transparent;
   border: none;
   cursor: pointer;
+  transition: transform 0.3s;
 }
 
-.content-jogo-boasorte{
+
+.content__jogo__imgs__button__one:hover,
+.content__jogo__imgs__button__tow:hover,
+.content__jogo__imgs__button__three:hover{
+  transform: rotate(45deg) scale(1.2);
+  
+ 
+}
+
+
+
+
+.content-jogo-boasorte {
   text-align: center;
   color: #00ffcb;
 }
 
-
-.content-jogo-result{
+.content-jogo-result {
   display: block;
   color: #fb0000;
   font-size: 20px;
   margin-top: 100px;
   text-align: start;
   margin-left: 30px;
-  
-
 }
 
-.content-results-jogadas{
-  display:flex ;
+.content-results-jogadas {
+  display: flex;
   justify-content: center;
   margin-top: 40px;
   gap: 50px;
 }
 
-
-
-.content-jogo-boasorte-jogadas{
+.content-jogo-boasorte-jogadas {
   background: rgba(142, 242, 242, 0.068);
   width: 250px;
   height: 100px;
   padding: 10px;
   border-radius: 20px 1px 20px 1px;
   text-align: center;
- 
-
-  
-
-
 }
-
-
-
-
-
-
-
-
-
-
 
 .wrap {
   margin: 0 auto;
@@ -151,8 +143,14 @@ body {
   outline: none;
   position: relative;
   padding: 10px;
+
 }
 
+.button:active{
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  top: 2px; 
+  left: 2px;
+}
 
 button::after {
   content: "";
