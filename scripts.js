@@ -1,22 +1,31 @@
-function openSectionOfPlay() {
-  var secaoDeJogos = document.querySelector(".content-jogo");
-  secaoDeJogos.style.display = "block";
-  secaoDeJogos.scrollIntoView({ behavior: "smooth" });
-}
+
+// VARIAVEIS GLOBAIS
 var iniciarJogoButton = document.querySelector(".button");
-iniciarJogoButton.addEventListener("click", openSectionOfPlay);
-
-
-
-
-
-
-
-
-
+var pedraButton = document.querySelector(".content__jogo__imgs__button__one");
+var papelButton = document.querySelector(".content__jogo__imgs__button__tow");
+var tesouraButton = document.querySelector(".content__jogo__imgs__button__three");
 var jogadasRestantes = 10;
 var suaPontuacao = 0;
 var pontuacaoInteligencia = 0;
+
+// EVENTOS DE CLIQUE
+iniciarJogoButton.addEventListener("click", openSectionOfPlay);
+pedraButton.addEventListener("click", jogarPedra);
+papelButton.addEventListener("click", jogarPedra);
+tesouraButton.addEventListener("click", jogarPedra);
+
+
+
+// FUNÇOES DA APLICAÇÃO
+function openSectionOfPlay() {
+
+  var secaoDeJogos = document.querySelector(".content-jogo");  
+  secaoDeJogos.style.display = "block";
+  secaoDeJogos.scrollIntoView({ behavior: "smooth" });
+}
+
+
+
 
 function atualizarJogadasRestantes() {
   jogadasRestantes -= 1;
@@ -62,9 +71,5 @@ function jogarPedra() {
 
   atualizarPontuacao();
 }
-var pedraButton = document.querySelector(".content__jogo__imgs__button__one");
-var papelButton = document.querySelector(".content__jogo__imgs__button__tow");
-var tesouraButton = document.querySelector(".content__jogo__imgs__button__three");
-pedraButton.addEventListener("click", jogarPedra);
-papelButton.addEventListener("click", jogarPedra );
-tesouraButton.addEventListener("click",jogarPedra);
+
+
