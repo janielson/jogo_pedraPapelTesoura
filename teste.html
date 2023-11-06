@@ -1,25 +1,42 @@
+<!DOCTYPE html>
 <html>
 <head>
-  <title>Botão de arrastar</title>
+  <style>
+    .content-jogo {
+      display: none; /* Inicialmente, oculte a seção de jogos */
+    }
+  </style>
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .content-jogo {
+      display: none; /* Inicialmente, oculte a seção de jogos */
+    }
+  </style>
 </head>
 <body>
-  <button draggable="true">Abrir</button>
-  <div id="conteudo">
-    <h1>Conteúdo da div</h1>
-    <p>Este é o conteúdo da div que será exibida ao arrastar o botão.</p>
-  </div>
 
-  <script>
-    function onDragStart(event) {
-      event.dataTransfer.setDragImage(document.getElementById("conteudo"), 0, 0);
-    }
+<!-- Seu HTML existente -->
 
-    function onDrop(event) {
-      document.getElementById("conteudo").style.display = "visible";
-    }
+<div class="wrap">
+  <button class="button" id="iniciarJogoButton">INICIAR JOGO</button>
+</div>
 
-    document.getElementById("botao").addEventListener("dragstart", onDragStart);
-    document.getElementById("conteudo").addEventListener("drop", onDrop);
-  </script>
+<!-- Seu HTML existente -->
+
+<script>
+  // Função para abrir a seção de jogos e rolar até ela
+  function abrirSecaoDeJogos() {
+    var secaoDeJogos = document.querySelector('.content-jogo');
+    secaoDeJogos.style.display = 'block';
+    
+  }
+
+  // Adicionar um ouvinte de evento ao botão
+  var iniciarJogoButton = document.getElementById('iniciarJogoButton');
+  iniciarJogoButton.addEventListener('click', abrirSecaoDeJogos);
+</script>
+
 </body>
 </html>
