@@ -12,11 +12,7 @@ iniciarJogoButton.addEventListener("click", openSectionOfPlay);
 
 
 
-var pedraButton = document.querySelector(".content__jogo__imgs__button__one");
-var papelButton = document.querySelector(".content__jogo__imgs__button__tow");
-var tesouraButton = document.querySelector(
-  ".content__jogo__imgs__button__three"
-);
+
 
 var jogadasRestantes = 10;
 var suaPontuacao = 0;
@@ -66,7 +62,9 @@ function jogarPedra() {
 
   atualizarPontuacao();
 }
-
 var pedraButton = document.querySelector(".content__jogo__imgs__button__one");
-
+var papelButton = document.querySelector(".content__jogo__imgs__button__tow");
+var tesouraButton = document.querySelector(".content__jogo__imgs__button__three");
 pedraButton.addEventListener("click", jogarPedra);
+papelButton.addEventListener("click", jogarPedra );
+tesouraButton.addEventListener("click",jogarPedra);
