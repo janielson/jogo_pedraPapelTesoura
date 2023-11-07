@@ -28,7 +28,7 @@ for(let i = 0 ;  i < buttonGame.length ; i ++) {
   } else if (escolhaDaInteligencia == 1) {
     escolhaDaInteligencia = "papel";
   } else {
-    escolhaDaInteligencia = "tesoura";
+    escolhaDaInteligencia = "tesoura";  
   }
 
   if (escolhaDoUsuario == "pedra" && escolhaDaInteligencia == "tesoura") {
