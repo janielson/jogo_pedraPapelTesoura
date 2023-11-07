@@ -4,18 +4,90 @@ var iniciarJogoButton = document.querySelector(".button");
 var pedraButton = document.querySelector(".content__jogo__imgs__button__one");
 var papelButton = document.querySelector(".content__jogo__imgs__button__tow");
 var tesouraButton = document.querySelector(".content__jogo__imgs__button__three");
-var buttonGame = document.querySelector(".button__game");
+var buttonGame = document.querySelectorAll(".button__game");
 var jogadasRestantes = 10;
 var suaPontuacao = 0;
 var pontuacaoInteligencia = 0;
 
 // EVENTOS DE CLIQUE
-buttonGame.addEventListener("click", jogarPedra);
+// buttonGame.addEventListener("click", jogarPedra);
 iniciarJogoButton.addEventListener("click", openSectionOfPlay);
 // pedraButton.addEventListener("click", jogarPedra);
 // papelButton.addEventListener("click", jogarPapel);
 // tesouraButton.addEventListener("click", jogarPedra);
 
+for(let i = 0 ;  i < buttonGame.length ; i ++) {
+  buttonGame[i].addEventListener("click", () => {
+      
+   let escolhaDoUsuario = buttonGame[i].querySelector(".content-jogo-imgs__pedra").innerHTML;
+   var escolhaDaInteligencia = Math.floor(Math.random() * 3);
+
+   
+  if (escolhaDaInteligencia == 0) {
+    escolhaDaInteligencia = "pedra";
+  } else if (escolhaDaInteligencia == 1) {
+    escolhaDaInteligencia = "papel";
+  } else {
+    escolhaDaInteligencia = "tesoura";
+  }
+
+  if (escolhaDoUsuario == "pedra" && escolhaDaInteligencia == "tesoura") {
+    suaPontuacao++;
+    pontuacaoInteligencia--;
+  } else if (escolhaDoUsuario == "pedra" && escolhaDaInteligencia == "papel") {
+    pontuacaoInteligencia++;
+    suaPontuacao--;
+  } else if (escolhaDoUsuario == "papel" && escolhaDaInteligencia == "pedra") {
+    suaPontuacao++;
+    pontuacaoInteligencia--;
+  } else if (escolhaDoUsuario == "papel" && escolhaDaInteligencia == "tesoura") {
+    pontuacaoInteligencia++;
+    suaPontuacao--;
+  } else if (escolhaDoUsuario == "tesoura" && escolhaDaInteligencia == "papel") {
+    suaPontuacao++;
+    pontuacaoInteligencia--;
+  } else if (escolhaDoUsuario == "tesoura" && escolhaDaInteligencia == "pedra") {
+    suaPontuacao--;
+    pontuacaoInteligencia++;
+  } else if(escolhaDoUsuario == "papel" && escolhaDaInteligencia == "papel") {
+     suaPontuacao--;
+     pontuacaoInteligencia--;
+
+  } else if(escolhaDoUsuario == "tesoura" && escolhaDaInteligencia == "tesoura") {
+    suaPontuacao--;
+    pontuacaoInteligencia--;
+
+ }else if(escolhaDoUsuario == "pedra" && escolhaDaInteligencia == "pedra") {
+  suaPontuacao--;
+  pontuacaoInteligencia--;
+
+}
+
+  
+  console.log("sua Pontuação "  + suaPontuacao);
+  console.log("sua Escolha "  + escolhaDoUsuario);
+  console.log("");
+  console.log("pontuação da inteligencia " + pontuacaoInteligencia);
+  console.log("escolha da inteligencia " + escolhaDaInteligencia); 
+   
+  if(suaPontuacao > pontuacaoInteligencia){ 
+    console.log("Você venceu");
+  } else if (suaPontuacao < pontuacaoInteligencia) {
+     console.log("Você perdeu");
+
+  } 
+
+   if( suaPontuacao === pontuacaoInteligencia) {
+      console.log("empate");
+   }
+
+  
+
+  
+  });
+ 
+
+}
 
 
 // FUNÇOES DA APLICAÇÃO
@@ -36,55 +108,18 @@ function jogarPedra() {
 
   
 
-  var escolhaDoUsuario = document.querySelector(".button__game");
+  var escolhaDoUsuario = document.querySelector(".button__game");   
   var elementFilho = escolhaDoUsuario.querySelector(".content-jogo-imgs__pedra").innerHTML;
 
   
   console.log(elementFilho);
 
   console.log("codigo primera verificação " +  escolhaDoUsuario)
-  var escolhaDaInteligencia = Math.floor(Math.random() * 3);
-
-  if (escolhaDaInteligencia == 0) {
-    escolhaDaInteligencia = "pedra";
-  } else if (escolhaDaInteligencia == 1) {
-    escolhaDaInteligencia = "papel";
-  } else {
-    escolhaDaInteligencia = "tesoura";
-  }
-
-  if (escolhaDoUsuario == "pedra" && escolhaDaInteligencia == "tesoura") {
-    suaPontuacao++;
-  } else if (escolhaDoUsuario == "pedra" && escolhaDaInteligencia == "papel") {
-    pontuacaoInteligencia++;
-  } else if (escolhaDoUsuario == "papel" && escolhaDaInteligencia == "pedra") {
-    suaPontuacao++;
-  } else if (escolhaDoUsuario == "papel" && escolhaDaInteligencia == "tesoura") {
-    pontuacaoInteligencia++;
-  } else if (escolhaDoUsuario == "tesoura" && escolhaDaInteligencia == "papel") {
-    suaPontuacao++;
-  } else if (escolhaDoUsuario == "tesoura" && escolhaDaInteligencia == "pedra") {
-    pontuacaoInteligencia++;
-  } else {
-    suaPontuacao++;
-    pontuacaoInteligencia++;
-  }
 
 
 
-  console.log("sua Pontuação "  + suaPontuacao);
-  console.log("sua Escolha "  + escolhaDoUsuario);
-  console.log("");
-  console.log("pontuação da inteligencia " + pontuacaoInteligencia);
-  console.log("escolha da inteligencia " + escolhaDaInteligencia); 
-   
-  if(suaPontuacao > pontuacaoInteligencia){ 
-    console.log("Você venceu");
-  } else if (suaPontuacao < pontuacaoInteligencia){ 
-     console.log("Você perdeu");
-  } else if (suaPontuacao == pontuacaoInteligencia){
-     console.log("Empate");
-  } 
+
+
 
   }
      //  pontuacaoInteligencia e suaPontuacao exibir na tela 
