@@ -81,13 +81,14 @@ body {
  
 }
 
-
-
-
-.content-jogo-boasorte {
-  text-align: center;
-  color: #00ffcb;
+.content__jogo__paragafos{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #f4f6f6;
 }
+
 
 .content-jogo-result {
   display: block;
@@ -183,4 +184,9 @@ button:focus::after {
     height: 300px;
     opacity: 0;
   }
+}
+
+
+.content-jogo-imgs__pedra {
+  display: none;
 }
