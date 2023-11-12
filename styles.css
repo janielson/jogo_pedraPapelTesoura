@@ -2,6 +2,15 @@ body {
   background-color: black;
 }
 
+:root{
+  /* fontes utilizadas */
+  --font-roboto: "Roboto Slab", serif;
+  --font-permanent: "Permanent Marker", cursive;
+  --font-poppins: "Poppins", sans-serif;
+  --font-playpen: "Playpen Sans", cursive;
+  /* cores utilizadas */
+}
+
 .content-paper-stone-scissors {
   width: 100%;
 }
@@ -25,13 +34,18 @@ body {
   box-shadow: 0 0 30px rgba(0, 255, 203, 0.7);
 }
 
-.content-paper-stone-scissors-paragraph-button {
+.explaining-the-game {
   color: #f4f6f6;
-  font-size: 18px;
   font-family: "Roboto Slab", serif;
+  font-size: 40px;
   text-align: center;
-  font-size: 32px;
+  margin: 0 100px;
+  font-family: var(--font-poppins);
+
+  
+
 }
+
 
 .content-jogo_imgs {
   background: rgba(255, 255, 255, 0.2);
@@ -78,7 +92,7 @@ body {
 .content__jogo__imgs__button__three:hover{
   transform: rotate(45deg) scale(1.2);
   
- 
+
 }
 
 .content__jogo__paragafos{
@@ -89,31 +103,37 @@ body {
   color: #f4f6f6;
 }
 
-
-.content-jogo-result {
+.moves-players{
   display: block;
-  color: #fb0000;
-  font-size: 20px;
-  margin-top: 100px;
-  text-align: start;
-  margin-left: 30px;
+  align-items: center;
+  
 }
 
-.content-results-jogadas {
+.moves-players-you{
   display: flex;
-  justify-content: center;
-  margin-top: 40px;
-  gap: 50px;
+  justify-content: start;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 50px;
 }
 
-.content-jogo-boasorte-jogadas {
-  background: rgba(142, 242, 242, 0.068);
-  width: 250px;
-  height: 100px;
-  padding: 10px;
-  border-radius: 20px 1px 20px 1px;
-  text-align: center;
+.moves-players-ia{
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  margin-top: 20px;
+  font-size: 50px;
+  font-family: var(--font-poppins);
 }
+
+.you__moves{
+  font-family: "Permanent Marker", cursive;
+  font-size: 20px;
+
+}
+
+
+
 
 .wrap {
   margin: 0 auto;
@@ -189,4 +209,9 @@ button:focus::after {
 
 .content-jogo-imgs__pedra {
   display: none;
+}
+
+.moves-players {
+  display: flex;
+  flex-direction: column;
 }
