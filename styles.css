@@ -9,6 +9,8 @@ body {
   --font-poppins: "Poppins", sans-serif;
   --font-playpen: "Playpen Sans", cursive;
   /* cores utilizadas */
+  --color-background:#F3DFB5;
+  --color-background-2:#9BE0E0;
 }
 
 .content-paper-stone-scissors {
@@ -130,6 +132,11 @@ body {
   font-family: "Permanent Marker", cursive;
   font-size: 20px;
 
+}
+
+.number__of__play{
+  color: red;
+  font-size: 28px;
 }
 
 

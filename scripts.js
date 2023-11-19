@@ -7,27 +7,49 @@ let jogadasRestantes = document.querySelector(".jogada__restantes");
 
 
 
+getEscolhaDoUsuario();
 
 function iniciarJogo() {
-const suaPontuacao = 0;
-const pontuacaoInteligencia = 0;
+  const suaPontuacao = 0;
+  const pontuacaoInteligencia = 0;
 
-  
+  for (let i = 0; i < buttonGame.length; i++) {
+    buttonGame[i].addEventListener("click", () => {
+      const escolhaDoUsuario = buttonGame[i].querySelector(
+        ".content-jogo-imgs__pedra"
+      ).innerHTML;
 
-for (let i = 0; i < buttonGame.length; i++) {
-buttonGame[i].addEventListener("click", () => {
-const escolhaDoUsuario = buttonGame[i].querySelector(".content-jogo-imgs__pedra").innerHTML;
+      const escolhaDaInteligencia = gerarEscolhaAleatoria();
 
-const escolhaDaInteligencia = gerarEscolhaAleatoria();
-
-const vencedor = calcularVencedor(
-escolhaDoUsuario,
-escolhaDaInteligencia);
+      const vencedor = calcularVencedor(
+        escolhaDoUsuario,
+        escolhaDaInteligencia
+      );
       // atualizarPontuacoes(vencedor, suaPontuacao, pontuacaoInteligencia);
       // exibirResultados(suaPontuacao, pontuacaoInteligencia);
       // checarResultado(suaPontuacao, pontuacaoInteligencia);
     });
   }
+}
+// ATUALMENTE CRIADA
+function getEscolhaDoUsuario() {
+
+  let escolhaDoUsuario = "";
+  for (let i = 0; i < buttonGame.length; i++) {
+
+    buttonGame[i].addEventListener("click", () => {
+
+       escolhaDoUsuario = buttonGame[i].querySelector(
+        ".content-jogo-imgs__pedra"
+      ).innerHTML;
+       
+      
+
+    });
+  }
+   
+  return escolhaDoUsuario;
+
 }
 
 // FUNÇOES DA APLICAÇÃO
