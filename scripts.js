@@ -1,17 +1,22 @@
 // VARIAVEIS GLOBAIS
 let iniciarJogoButton = document.querySelector(".button").addEventListener("click", abrirModalDeJogo);
-let buttonGame = document.querySelectorAll(".button__game");
+
 let myResult = document.querySelector(".content-jogo-resut-my-resuts");
 let inteligenciaResult = document.querySelector(".content-jogo-resut-inteligence");
 let jogadasRestantes = document.querySelector(".jogada__restantes");
 
 
+<<<<<<< HEAD
 
 getEscolhaDoUsuario();
+=======
+iniciarJogo();
+>>>>>>> 31574adadc74fed2d62a08f921d91e1308989e5f
 
 function iniciarJogo() {
   const suaPontuacao = 0;
   const pontuacaoInteligencia = 0;
+<<<<<<< HEAD
 
   for (let i = 0; i < buttonGame.length; i++) {
     buttonGame[i].addEventListener("click", () => {
@@ -19,12 +24,25 @@ function iniciarJogo() {
         ".content-jogo-imgs__pedra"
       ).innerHTML;
 
+=======
+  let buttonGame = document.querySelectorAll(".button__game");
+
+
+  for (let i = 0; i < buttonGame.length; i++) {
+    buttonGame[i].addEventListener("click", () => {
+      const escolhaDoUsuario = buttonGame[i].querySelector(".content-jogo-imgs__pedra").innerHTML;
+       console.log(escolhaDoUsuario)
+>>>>>>> 31574adadc74fed2d62a08f921d91e1308989e5f
       const escolhaDaInteligencia = gerarEscolhaAleatoria();
 
       const vencedor = calcularVencedor(
         escolhaDoUsuario,
+<<<<<<< HEAD
         escolhaDaInteligencia
       );
+=======
+        escolhaDaInteligencia);
+>>>>>>> 31574adadc74fed2d62a08f921d91e1308989e5f
       // atualizarPontuacoes(vencedor, suaPontuacao, pontuacaoInteligencia);
       // exibirResultados(suaPontuacao, pontuacaoInteligencia);
       // checarResultado(suaPontuacao, pontuacaoInteligencia);
