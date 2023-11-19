@@ -4,52 +4,8 @@ let iniciarJogoButton = document.querySelector(".button").addEventListener("clic
 let myResult = document.querySelector(".content-jogo-resut-my-resuts");
 let inteligenciaResult = document.querySelector(".content-jogo-resut-inteligence");
 let jogadasRestantes = document.querySelector(".jogada__restantes");
+let buttonGame = document.querySelectorAll(".button__game");
 
-
-<<<<<<< HEAD
-
-getEscolhaDoUsuario();
-=======
-iniciarJogo();
->>>>>>> 31574adadc74fed2d62a08f921d91e1308989e5f
-
-function iniciarJogo() {
-  const suaPontuacao = 0;
-  const pontuacaoInteligencia = 0;
-<<<<<<< HEAD
-
-  for (let i = 0; i < buttonGame.length; i++) {
-    buttonGame[i].addEventListener("click", () => {
-      const escolhaDoUsuario = buttonGame[i].querySelector(
-        ".content-jogo-imgs__pedra"
-      ).innerHTML;
-
-=======
-  let buttonGame = document.querySelectorAll(".button__game");
-
-
-  for (let i = 0; i < buttonGame.length; i++) {
-    buttonGame[i].addEventListener("click", () => {
-      const escolhaDoUsuario = buttonGame[i].querySelector(".content-jogo-imgs__pedra").innerHTML;
-       console.log(escolhaDoUsuario)
->>>>>>> 31574adadc74fed2d62a08f921d91e1308989e5f
-      const escolhaDaInteligencia = gerarEscolhaAleatoria();
-
-      const vencedor = calcularVencedor(
-        escolhaDoUsuario,
-<<<<<<< HEAD
-        escolhaDaInteligencia
-      );
-=======
-        escolhaDaInteligencia);
->>>>>>> 31574adadc74fed2d62a08f921d91e1308989e5f
-      // atualizarPontuacoes(vencedor, suaPontuacao, pontuacaoInteligencia);
-      // exibirResultados(suaPontuacao, pontuacaoInteligencia);
-      // checarResultado(suaPontuacao, pontuacaoInteligencia);
-    });
-  }
-}
-// ATUALMENTE CRIADA
 function getEscolhaDoUsuario() {
 
   let escolhaDoUsuario = "";
@@ -57,15 +13,15 @@ function getEscolhaDoUsuario() {
 
     buttonGame[i].addEventListener("click", () => {
 
-       escolhaDoUsuario = buttonGame[i].querySelector(
+    escolhaDoUsuario = buttonGame[i].querySelector(
         ".content-jogo-imgs__pedra"
       ).innerHTML;
-       
+  
       
 
     });
   }
-   
+
   return escolhaDoUsuario;
 
 }
