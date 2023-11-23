@@ -2,19 +2,57 @@ body {
   background-color: black;
 }
 
-:root{
+:root {
   /* fontes utilizadas */
   --font-roboto: "Roboto Slab", serif;
   --font-permanent: "Permanent Marker", cursive;
   --font-poppins: "Poppins", sans-serif;
   --font-playpen: "Playpen Sans", cursive;
   /* cores utilizadas */
-  --color-background:#F3DFB5;
-  --color-background-2:#9BE0E0;
+  --color-background: #F3DFB5;
+  --color-background-2: #9BE0E0;
 }
+
+.main {
+  position: relative
+}
+
+.video-background {
+  position: fixed;
+  height: 130vh;
+  pointer-events: none;
+  z-index: -1;
+  background: linear-gradient(90deg, black 0%, black 10%, transparent 50%, transparent 100%);
+  opacity: 0.5;
+
+}
+
+.video-background::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  /* background-color: red; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 20%;
+
+}
+
+.video-background video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+
+
+
+
+}
+
 
 .content-paper-stone-scissors {
   width: 100%;
+
 }
 
 .img-background-aplication {
@@ -44,7 +82,7 @@ body {
   margin: 0 100px;
   font-family: var(--font-poppins);
 
-  
+
 
 }
 
@@ -73,6 +111,7 @@ body {
   height: 200px;
   margin-top: 40px;
 }
+
 .content-jogo-imgs {
   display: flex;
   justify-content: center;
@@ -91,13 +130,13 @@ body {
 
 .content__jogo__imgs__button__one:hover,
 .content__jogo__imgs__button__tow:hover,
-.content__jogo__imgs__button__three:hover{
+.content__jogo__imgs__button__three:hover {
   transform: rotate(45deg) scale(1.2);
-  
+
 
 }
 
-.content__jogo__paragafos{
+.content__jogo__paragafos {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -105,13 +144,13 @@ body {
   color: #f4f6f6;
 }
 
-.moves-players{
+.moves-players {
   display: block;
   align-items: center;
-  
+
 }
 
-.moves-players-you{
+.moves-players-you {
   display: flex;
   justify-content: start;
   align-items: center;
@@ -119,7 +158,7 @@ body {
   font-size: 50px;
 }
 
-.moves-players-ia{
+.moves-players-ia {
   display: flex;
   justify-content: start;
   align-items: start;
@@ -128,13 +167,13 @@ body {
   font-family: var(--font-poppins);
 }
 
-.you__moves{
+.you__moves {
   font-family: "Permanent Marker", cursive;
   font-size: 20px;
 
 }
 
-.number__of__play{
+.number__of__play {
   color: red;
   font-size: 28px;
 }
@@ -159,11 +198,9 @@ body {
   font-weight: 700;
   color: #313133;
   background: #4fd1c5;
-  background: linear-gradient(
-    90deg,
-    rgba(129, 230, 217, 1) 0%,
-    rgba(79, 209, 197, 1) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(129, 230, 217, 1) 0%,
+      rgba(79, 209, 197, 1) 100%);
   border: none;
   border-radius: 1000px;
   box-shadow: 1px 6px 18px rgba(79, 209, 197, 0.64);
@@ -174,9 +211,9 @@ body {
 
 }
 
-.button:active{
+.button:active {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  top: 2px; 
+  top: 2px;
   left: 2px;
 }
 
@@ -206,6 +243,7 @@ button:focus::after {
     height: 30px;
     opacity: 1;
   }
+
   100% {
     width: 300px;
     height: 300px;

@@ -103,3 +103,4 @@ function trocaImagemDoPlacar(resultadoJogador, resultadoInteligencia) {
     imgInteligence.src = "&#x1F44A; &#x1F3FB;";
   }
 }
+
