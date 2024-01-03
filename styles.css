@@ -50,10 +50,10 @@ body {
 }
 
 
-.content-paper-stone-scissors {
+/* .content-paper-stone-scissors {
   width: 100%;
 
-}
+} */
 
 .img-background-aplication {
   height: 350px;
@@ -85,101 +85,6 @@ body {
 
 
 }
-
-
-.content-jogo_imgs {
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  margin: 0 auto;
-  margin-top: 30px;
-  border-radius: 18px;
-  width: 50%;
-}
-
-.content-jogo {
-  background: rgba(255, 255, 255, 0.2);
-  width: 88%;
-  margin: 0 auto;
-  border-radius: 20px 1px 20px 1px;
-  box-shadow: 0 0 30px rgba(0, 255, 203, 0.7);
-  margin-bottom: 50px;
-  padding: 20px;
-  display: none;
-}
-
-.content-jogo-imgs img {
-  height: 200px;
-  margin-top: 40px;
-}
-
-.content-jogo-imgs {
-  display: flex;
-  justify-content: center;
-  gap: 100px;
-}
-
-.content__jogo__imgs__button__one,
-.content__jogo__imgs__button__tow,
-.content__jogo__imgs__button__three {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-
-
-.content__jogo__imgs__button__one:hover,
-.content__jogo__imgs__button__tow:hover,
-.content__jogo__imgs__button__three:hover {
-  transform: rotate(45deg) scale(1.2);
-
-
-}
-
-.content__jogo__paragafos {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #f4f6f6;
-}
-
-.moves-players {
-  display: block;
-  align-items: center;
-
-}
-
-.moves-players-you {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  margin-top: 20px;
-  font-size: 50px;
-}
-
-.moves-players-ia {
-  display: flex;
-  justify-content: start;
-  align-items: start;
-  margin-top: 20px;
-  font-size: 50px;
-  font-family: var(--font-poppins);
-}
-
-.you__moves {
-  font-family: "Permanent Marker", cursive;
-  font-size: 20px;
-
-}
-
-.number__of__play {
-  color: red;
-  font-size: 28px;
-}
-
-
-
 
 .wrap {
   margin: 0 auto;
@@ -217,46 +122,6 @@ body {
   left: 2px;
 }
 
-button::after {
-  content: "";
-  width: 30px;
-  height: 30px;
-  border-radius: 100%;
-  border: 6px solid #00ffcb;
-  position: absolute;
-  z-index: -1;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation: ring 1.5s infinite;
-}
-
-button:hover::after,
-button:focus::after {
-  animation: none;
-  display: none;
-}
-
-@keyframes ring {
-  0% {
-    width: 30px;
-    height: 30px;
-    opacity: 1;
-  }
-
-  100% {
-    width: 300px;
-    height: 300px;
-    opacity: 0;
-  }
-}
 
 
-.content-jogo-imgs__pedra {
-  display: none;
-}
 
-.moves-players {
-  display: flex;
-  flex-direction: column;
-}
