@@ -86,14 +86,14 @@ body {
 
 }
 
-.wrap {
+.box-button {
   margin: 0 auto;
   width: fit-content;
   margin-top: 18px;
   margin-bottom: 50px;
 }
 
-.button {
+.button__access {
   min-width: 300px;
   min-height: 60px;
   font-family: "Nunito", sans-serif;
@@ -116,7 +116,7 @@ body {
 
 }
 
-.button:active {
+.button__access:active {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   top: 2px;
   left: 2px;
