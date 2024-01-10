@@ -68,6 +68,19 @@ body {
   box-shadow: 0 0 30px rgba(0, 255, 203, 0.7);
 }
 
+
+.titulo h5 {
+
+  font-size: 80px;
+  text-align: center;
+  color: white;
+  text-decoration: underline;
+    text-transform:uppercase;
+    margin-bottom: 10px;
+  
+
+}
+
 .explaining-the-game {
   color: #f4f6f6;
   font-family: "Roboto Slab", serif;
@@ -80,12 +93,7 @@ body {
 
 }
 
-.box-button {
-  margin: 0 auto;
-  width: fit-content;
-  margin-top: 18px;
-  margin-bottom: 50px;
-}
+
 
 .button__access {
   min-width: 300px;
@@ -116,6 +124,8 @@ body {
   left: 2px;
 }
 
-
+.texto {
+  display: none;
+}
 
 
