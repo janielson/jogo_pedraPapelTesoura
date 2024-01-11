@@ -54,8 +54,13 @@ body {
 }
 
 .content-paper-stone-scissors_img-marca {
+  position: relative;
   display: flex;
   justify-content: center;
+  width: fit-content;
+  margin: 0 auto;
+  
+
 }
 
 .img-background-aplication-logo {
@@ -68,64 +73,45 @@ body {
   box-shadow: 0 0 30px rgba(0, 255, 203, 0.7);
 }
 
+.balao-de-dialagos{
+  position: absolute;
+  background-color: #00ffcb;
+  height: 200px;
+  width: 420px;
+  right: -320px;
+  top: -94px;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 46%, 100% 79%, 13% 79%, 0 99%, 0 46%);
+  border-radius: 20px;
 
-.titulo h5 {
+}
 
-  font-size: 80px;
+
+
+
+.ola-seja-bem-vindo{
+  color: black;
   text-align: center;
-  color: white;
-  text-decoration: underline;
-    text-transform:uppercase;
-    margin-bottom: 10px;
+  padding-top: 20px;
+  font-size: 30px;
+
+}
+
+.ola-seja-bem-vindo::after{
+  content: '|';
+  margin-left: 3px;
+  border-radius: 4px;
+  background-color: black;
+  opacity: 1;
+  animation: piscar .8s infinite;
+}
+
+@keyframes piscar {
+    
+  0%, 100% {
+      opacity: 1;
+  }
+   50%{
+     opacity: 0;
+   }
   
-
 }
-
-.explaining-the-game {
-  color: #f4f6f6;
-  font-family: "Roboto Slab", serif;
-  font-size: 40px;
-  text-align: center;
-  margin: 0 100px;
-  font-family: var(--font-poppins);
-
-
-
-}
-
-
-
-.button__access {
-  min-width: 300px;
-  min-height: 60px;
-  font-family: "Nunito", sans-serif;
-  font-size: 22px;
-  text-transform: uppercase;
-  letter-spacing: 1.3px;
-  font-weight: 700;
-  color: #313133;
-  background: #4fd1c5;
-  background: linear-gradient(90deg,
-      rgba(129, 230, 217, 1) 0%,
-      rgba(79, 209, 197, 1) 100%);
-  border: none;
-  border-radius: 1000px;
-  box-shadow: 1px 6px 18px rgba(79, 209, 197, 0.64);
-  transition: all 0.3s ease-in-out 0s;
-  cursor: pointer;
-  outline: none;
-  padding: 10px;
-
-}
-
-.button__access:active {
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  top: 2px;
-  left: 2px;
-}
-
-.texto {
-  display: none;
-}
-
-
