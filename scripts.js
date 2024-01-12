@@ -1,6 +1,6 @@
 
 //paragrafos para serem execultados 
-const sejaBemVindo = document.querySelector(".ola-seja-bem-vindo")
+const sejaBemVindo = document.querySelector(".dialog__paragraph__one")
 const sejaBemVindoMessageSecond = document.querySelector(".ola-seja-bem-vindo__second-message");
 
 
@@ -29,30 +29,3 @@ function typewriter(paragrafos) {
 
 
 }
-
-
-
-// Função para exibir os parágrafos automaticamente
-function exibirParagrafosAutomaticamente() {
-    // Obter todos os parágrafos
-    var paragrafos = document.querySelectorAll('p');
-
-   
-
-    paragrafos[0].style.display = "none";
-    paragrafos[1].style.display = "none";
-
-    // Iterar sobre os parágrafos
-    paragrafos.forEach(function (paragrafo, index) {
-        // Exibir o parágrafo atual após um atraso de 1000 milissegundos (1 segundo)
-        setTimeout(function () {
-            paragrafo.style.display = 'block';
-        }, index * 1000);  // O atraso aumenta a cada parágrafo (index * 1000)
-    });
-}
-
-
-
-
-
-  
