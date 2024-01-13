@@ -74,7 +74,7 @@ body {
   box-shadow: 0 0 30px rgba(0, 255, 203, 0.7);
 }
 
-.dialog-box{
+.balao-de-dialagos{
   position: absolute;
   background-color: #00ffcb;
   height: 200px;
@@ -89,7 +89,7 @@ body {
 
 
 
-.dialog-box{
+.balao-de-dialagos{
   color: black;
   text-align: center;
   padding-top: 20px;
