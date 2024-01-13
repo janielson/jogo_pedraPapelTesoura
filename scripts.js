@@ -1,9 +1,27 @@
+document.addEventListener('DOMContentLoaded', function() {startTyping(dialogues);});
+
+
+
+
+
+let dialogues = [
+    'Olá, seja bem-vindo!',
+    'Pronto para jogar Jokenpô?',
+    'Escolha Pedra, Papel ou Tesoura e boa sorte!'
+];
+
+
+
+
+
+
 
 function speak(text) {
     let utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = 'pt-BR'; // Definir o idioma para português do Brasil
     speechSynthesis.speak(utterance);
 }
+
 
 function typeWriter(text, n, element, callback) {
     if (n < text.length) {
@@ -27,13 +45,5 @@ function startTyping(dialogues) {
     }
 }
 
-let dialogues = [
-    'Olá, seja bem-vindo!',
-    'Pronto para jogar Jokenpô?',
-    'Escolha Pedra, Papel ou Tesoura e boa sorte!'
-];
 
-document.addEventListener('DOMContentLoaded', function() {
-    startTyping(dialogues);
-});
 
