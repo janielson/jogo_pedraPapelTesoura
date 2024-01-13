@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 function speak(text) {
     let utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = 'pt-BR'; // Definir o idioma para português do Brasil
@@ -35,3 +36,36 @@ let dialogues = [
 document.addEventListener('DOMContentLoaded', function() {
     startTyping(dialogues);
 });
+=======
+
+//paragrafos para serem execultados 
+const sejaBemVindo = document.querySelector(".dialog__paragraph__one")
+const sejaBemVindoMessageSecond = document.querySelector(".ola-seja-bem-vindo__second-message");
+
+
+
+
+
+
+typewriter(sejaBemVindo);
+
+// Chamar a função para iniciar a exibição automática
+//exibirParagrafosAutomaticamente();
+
+
+
+function typewriter(paragrafos) {
+    let textoArray = paragrafos.innerHTML.split('')
+    paragrafos.innerHTML = ''
+    textoArray.forEach((letra, index) => {
+        setTimeout(function () {
+            paragrafos.innerHTML += letra
+
+        }, 75 * index)
+
+    });
+
+
+
+}
+>>>>>>> e12cce1129b2872f1b5a146c37f5bd43387c12d1

@@ -1,0 +1,31 @@
+.maquina-escrever {
+    font-family: monospace;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  .maquina-escrever p {
+    display: inline-block;
+    margin: 0;
+  }
+  
+  .maquina-escrever p::after {
+    content: "";
+    display: inline-block;
+    width: 0.6em; /* Largura do cursor */
+    height: 1.2em; /* Altura do cursor */
+    background-color: #000;
+    vertical-align: text-bottom;
+    animation: cursor-blink 0.8s infinite;
+  }
+  
+  @keyframes cursor-blink {
+    50% {
+      opacity: 0;
+    }
+  }
+
+  .hidden {
+    display: none;
+  }
+  
