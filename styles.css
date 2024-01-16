@@ -82,7 +82,9 @@ body {
   right: -320px;
   top: -94px;
   clip-path: polygon(0% 0%, 100% 0%, 100% 46%, 100% 79%, 13% 79%, 0 99%, 0 46%);
-  border-radius: 20px;
+  border-radius: 10px;
+
+
 
 }
 
@@ -94,25 +96,54 @@ body {
   text-align: center;
   padding-top: 20px;
   font-size: 30px;
-
-}
-
-.dialog__paragraph__one::after{
-  content: '|';
-  margin-left: 3px;
-  border-radius: 4px;
-  background-color: black;
-  opacity: 1;
-  animation: piscar .8s infinite;
-}
-
-@keyframes piscar {
-    
-  0%, 100% {
-      opacity: 1;
-  }
-   50%{
-     opacity: 0;
-   }
+  font-family: Georgia, 'Times New Roman', Times, serif;
   
+  
+
 }
+
+
+.button-iniciar-jogo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 300px;
+  height: 50px;
+  border-radius: 0px 70px 0px 70px;
+  font-size: 28px;
+  background-color: var(--color-background);
+  border: 3px solid var(--color-background-2);
+  color: rgb(5, 5, 5);
+  font-family: var(--font-playpen);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.7),
+              0 0 20px rgba(0, 255, 255, 0.7),
+              0 0 30px rgba(0, 255, 255, 0.7);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: pulse 1.8s infinite;
+  transition: all 0.3s ease, transform 0.1s ease;
+ 
+}
+
+@keyframes pulse {
+  0% {
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.7),
+                  0 0 20px rgba(0, 255, 255, 0.7),
+                  0 0 30px rgba(0, 255, 255, 0.7);
+  }
+  50% {
+      box-shadow: 0 0 15px rgba(0, 255, 255, 1),
+                  0 0 25px rgba(0, 255, 255, 1),
+                  0 0 35px rgba(0, 255, 255, 1);
+  }
+  100% {
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.7),
+                  0 0 20px rgba(0, 255, 255, 0.7),
+                  0 0 30px rgba(0, 255, 255, 0.7);
+  }
+}
+
+
+

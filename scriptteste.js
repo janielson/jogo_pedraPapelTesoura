@@ -1,32 +1,36 @@
-document.addEventListener("DOMContentLoaded", function() {
-  typeWriter("paragrafo1", function() {
-    setTimeout(function() {
-      document.getElementById("paragrafo1").classList.add("hidden");
-      document.getElementById("paragrafo2").classList.remove("hidden");
-      typeWriter("paragrafo2");
-    }, 1000); // Tempo de espera após completar o primeiro parágrafo (1 segundo neste exemplo)
-  });
+document.addEventListener('DOMContentLoaded', function () {
+    startTyping(dialogues);
 });
 
-function typeWriter(elementId, callback) {
-  var speed = 50; // Velocidade da digitação em milissegundos
-  var element = document.getElementById(elementId);
-  var text = element.innerText;
-  var i = 0;
+let dialogues = [
+    'Olá, seja bem-vindo!',
+    'Pronto para jogar Jokenpô?',
+    'Escolha Pedra, Papel ou Tesoura e boa sorte!',
+    'Antes de começarmos,veja como funciona o jogo. clique em "Saiba Mais!" no botão a baixo'
+];
 
-  element.innerHTML = ''; // Limpar o conteúdo original
-
-  function type() {
-    if (i < text.length) {
-      element.innerHTML += text.charAt(i);
-      i++;
-      setTimeout(type, speed);
-    } else {
-      if (callback) {
-        callback();
-      }
+function typeWriter(text, n, element, callback) {
+    if (n < text.length) {
+        element.innerHTML = text.substring(0, n + 1);
+        setTimeout(function () {
+            typeWriter(text, n + 1, element, callback);
+        }, 75);
+    } else if (callback) {
+        setTimeout(callback, 1500);
     }
-  }
-
-  type();
 }
+
+function startTyping(dialogues) {
+    if (dialogues.length > 0) {
+        let dialogue = dialogues.shift();
+        let element = document.querySelector('.balao-de-dialagos p');
+        typeWriter(dialogue, 0, element, function () {
+            startTyping(dialogues);
+        });
+    }
+}
+
+
+
+
+
