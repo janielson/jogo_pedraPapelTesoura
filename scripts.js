@@ -1,62 +1,41 @@
 document.addEventListener('DOMContentLoaded', function () {
-    startTyping(dialogues);
+  iniciarDigitacao(dialogos);
+  configurarBotaoIniciarJogo();
+  configurarAcoesDoJogo();
 });
 
-let dialogues = [
-    'Olá, seja bem-vindo!',
-    'Pronto para jogar Jokenpô?',
-    'Escolha Pedra, Papel ou Tesoura e boa sorte!'
-    
+let dialogos = [
+  'Olá, seja bem-vindo!',
+  'Pronto para jogar Jokenpô?',
+  'Escolha Pedra, Papel ou Tesoura e boa sorte!'
 ];
 
-function typeWriter(text,  numberOfCharactersToDisplay, elementOfText, callback) {
-    if (numberOfCharactersToDisplay < text.length) {
-        elementOfText.innerHTML = text.substring(0, numberOfCharactersToDisplay + 1);
-
-        setTimeout(function () {
-            typeWriter(text, numberOfCharactersToDisplay + 1, elementOfText, callback);
-        }, 75);
-
-    } else if (callback) {
-        setTimeout(callback, 1500);
-    }
+function maquinaDeEscrever(texto, numeroDeCaracteres, elementoDoTexto, callback) {
+  if (numeroDeCaracteres < texto.length) {
+    elementoDoTexto.innerHTML = texto.substring(0, numeroDeCaracteres + 1);
+    setTimeout(function () {
+      maquinaDeEscrever(texto, numeroDeCaracteres + 1, elementoDoTexto, callback);
+    }, 75);
+  } else if (callback) {
+    setTimeout(callback, 1500);
+  }
 }
 
-function startTyping(dialogues) {
-    if (dialogues.length > 0) {
-        let dialogue = dialogues.shift();
-        let element = document.querySelector('.balao-de-dialagos p');
-        
-        (dialogue, 0, element, function () {
-            startTyping(dialogues);
-        });
-    }
+function iniciarDigitacao(dialogos) {
+  if (dialogos.length > 0) {
+    let dialogo = dialogos.shift();
+    let elemento = document.querySelector('.balao-de-dialagos p');
+    maquinaDeEscrever(dialogo, 0, elemento, function () {
+      iniciarDigitacao(dialogos);
+    });
+  }
 }
 
-// efeito no botão para o usuario saber que foi clicado 
-
-document.addEventListener('DOMContentLoaded', function() {
-    let button = document.querySelector('.button-iniciar-jogo');
-
-    button.addEventListener('mousedown', function() {
-        button.style.backgroundColor = '#000000'; // Muda a cor de fundo para preto
-        button.style.color = '#FFFFFF'; // Muda a cor do texto para branco
-    });
-
-    button.addEventListener('mouseup', function() {
-        button.style.backgroundColor = ''; // Restaura a cor de fundo original
-        button.style.color = ''; // Restaura a cor do texto original
-    });
-
-    button.addEventListener('mouseout', function() {
-        button.style.backgroundColor = ''; // Restaura a cor de fundo original se o mouse sair
-        button.style.color = ''; // Restaura a cor do texto original se o mouse sair
-    });
-});
 
 
 
-// açoes do jogo 
+
+
 
 const computer = document.querySelector(".computer img");
 const player = document.querySelector(".player img");
@@ -73,12 +52,12 @@ options.forEach((option) => {
       computer.classList.remove("shakeComputer");
       player.classList.remove("shakePlayer");
 
-      player.src = "./" + option.innerHTML + "Player.png";
+      player.src = "./assets/" + option.innerHTML + "Player.png";
 
       const choice = ["STONE", "PAPER", "SCISSORS"];
       let arrayNo = Math.floor(Math.random() * 3);
       let computerChoice = choice[arrayNo];
-      computer.src = "./" + computerChoice + "Computer.png";
+      computer.src = "./assets/" + computerChoice + "Computer.png";
 
       let cPoints = parseInt(computerPoints.innerHTML);
       let pPoints = parseInt(playerPoints.innerHTML);
