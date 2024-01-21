@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,10 +8,12 @@
   <link rel="stylesheet" href="/styles.css" />
   <title>JOKENPÔ</title>
 </head>
+
 <body>
   <main class="main">
     <div class="video-background">
-      <video autoplay muted loop="infinite" src="/videos/Network Connection Background Video, Plexus Dot Connection Background Loop _ Free Stock Footage (720p).mp4"></video>
+      <video autoplay muted loop="infinite"
+        src="/videos/Network Connection Background Video, Plexus Dot Connection Background Loop _ Free Stock Footage (720p).mp4"></video>
     </div>
     <div class="content-paper-stone-scissors">
       <figure class="content-paper-stone-scissors_imglogo">
@@ -26,26 +29,31 @@
     <button class="button-iniciar-jogo">VAMOS LÁ?</button>
 
 
-    <!-- html do jogo -->
-    <div class="container">
+    <div class="container-jogo">
+
       <div class="images">
         <div class="computer">
-         
-          <img src="./assets/stoneComputer.png" />
+          <img src="./assets/stonecomputer.png" />
         </div>
         <div class="player">
           <img src="./assets/stoneplayer.png" />
         </div>
       </div>
-      <div class="points">
-        inteligência <span class="computerPoints"> 0 </span> / <span class="playerPoints"> 0 </span> VOCÊ </div>
+      <div class="points"> inteligência <span class="computerPoints"> 0 </span> | <span class="playerPoints"> 0 </span>
+        você
+      </div>
       <div class="options">
-        <button type="button">PEDRA</button>
-        <button type="button">PAPEL</button>
-        <button type="button">TESOURA</button>
+      <img class="imagem_botão_escolha" src="./assets/stoneicon.png" alt=""><button type="button">PEDRA</button>
+      <img class="imagem_botão_escolha" src="./assets/paper.png" alt=""><button type="button">PAPEL</button>
+      <img class="imagem_botão_escolha" src="./assets/scissors.png" alt=""><button type="button">TESOURA</button>
+
       </div>
     </div>
+
+
+
     <script src="/scripts.js"></script>
   </main>
 </body>
+
 </html>

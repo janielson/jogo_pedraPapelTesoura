@@ -42,7 +42,7 @@ body {
   height: 100%;
   width: 100%;
   object-fit: cover;
- 
+
 
 
 
@@ -50,7 +50,7 @@ body {
 
 
 .img-background-aplication {
-  height: 350px;
+  height: 500px;
 }
 
 .content-paper-stone-scissors_img-marca {
@@ -60,7 +60,7 @@ body {
   width: fit-content;
   margin: 0 auto;
 
-  
+
 
 }
 
@@ -74,7 +74,7 @@ body {
   box-shadow: 0 0 30px rgba(0, 255, 203, 0.7);
 }
 
-.balao-de-dialagos{
+.balao-de-dialagos {
   position: absolute;
   background-color: #00ffcb;
   height: 200px;
@@ -91,19 +91,19 @@ body {
 
 
 
-.balao-de-dialagos{
+.balao-de-dialagos {
   color: black;
   text-align: center;
   padding-top: 20px;
   font-size: 30px;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  
-  
+
+
 
 }
 
 
-.button-iniciar-jogo{
+.button-iniciar-jogo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -118,42 +118,54 @@ body {
   color: rgb(5, 5, 5);
   font-family: var(--font-playpen);
   box-shadow: 0 0 10px rgba(0, 255, 255, 0.7),
-              0 0 20px rgba(0, 255, 255, 0.7),
-              0 0 30px rgba(0, 255, 255, 0.7);
+    0 0 20px rgba(0, 255, 255, 0.7),
+    0 0 30px rgba(0, 255, 255, 0.7);
   cursor: pointer;
   transition: all 0.3s ease;
   animation: pulse 1.8s infinite;
   transition: all 0.3s ease, transform 0.1s ease;
- 
+
 }
 
 @keyframes pulse {
   0% {
-      box-shadow: 0 0 10px rgba(0, 255, 255, 0.7),
-                  0 0 20px rgba(0, 255, 255, 0.7),
-                  0 0 30px rgba(0, 255, 255, 0.7);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.7),
+      0 0 20px rgba(0, 255, 255, 0.7),
+      0 0 30px rgba(0, 255, 255, 0.7);
   }
+
   50% {
-      box-shadow: 0 0 15px rgba(0, 255, 255, 1),
-                  0 0 25px rgba(0, 255, 255, 1),
-                  0 0 35px rgba(0, 255, 255, 1);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 1),
+      0 0 25px rgba(0, 255, 255, 1),
+      0 0 35px rgba(0, 255, 255, 1);
   }
+
   100% {
-      box-shadow: 0 0 10px rgba(0, 255, 255, 0.7),
-                  0 0 20px rgba(0, 255, 255, 0.7),
-                  0 0 30px rgba(0, 255, 255, 0.7);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.7),
+      0 0 20px rgba(0, 255, 255, 0.7),
+      0 0 30px rgba(0, 255, 255, 0.7);
   }
 }
 
 
+.container-jogo {
+  display: block;
+  background-color: rgba(254, 254, 255, 0.363);
+  width: 600px;
+  margin: 100px auto;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  animation: pulse 1.8s infinite;
+  transition: all 0.3s ease, transform 0.1s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.7),
+    0 0 20px rgba(0, 255, 255, 0.7),
+    0 0 30px rgba(0, 255, 255, 0.7);
 
 
-/* estilos do jogo */
 
-.message {
-  margin: 5em 0 2em;
-  text-align: center;
 }
+
+
 .images {
   display: flex;
   justify-content: space-around;
@@ -161,80 +173,126 @@ body {
   text-align: center;
   height: 200px;
 }
+
 .computer img,
 .player img {
   width: 75%;
 }
+
 .shakeComputer {
   animation: shakeComputer 0.8s linear;
 }
+
 .shakePlayer {
   animation: shakePlayer 0.8s linear;
 }
+
 .points {
   margin: 2em 0;
   text-align: center;
 }
+
 .computerPoints {
   margin-left: 3em;
 }
+
 .playerPoints {
   margin-right: 3em;
 }
+
 .options {
-  margin-top: 5em;
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  padding: 10px;
 }
+
 .options button {
-  background: none;
-  color: #fff;
-  font-family: "Poppins";
-  border: 1px solid #fff;
-  padding: 1em 2em;
-  border-radius: 7px;
+  background-color: rgba(254, 254, 255, 0.363);
+  color: #131212;
+  font-family: var(--font-playpen);
+  border: 1px solid #06e7f7;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 50px;
   width: 150px;
+  height: fit-content;
   white-space: nowrap;
   cursor: pointer;
   outline: none;
   transition: 0.2s all linear;
 }
+
 .options button:hover {
-  background-color: darkcyan;
-  border: 1px solid darkcyan;
+  background-color: #F3DFB5;
+  border: 1px solid #F3DFB5;
 }
+
 @keyframes shakeComputer {
   0% {
     transform: rotate(-30deg);
   }
+
   25% {
     transform: rotate(30deg);
   }
+
   50% {
     transform: rotate(-30deg);
   }
+
   75% {
     transform: rotate(30deg);
   }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-@keyframes shakePlayer {
-  0% {
-    transform: rotate(30deg);
-  }
-  25% {
-    transform: rotate(-30deg);
-  }
-  50% {
-    transform: rotate(30deg);
-  }
-  75% {
-    transform: rotate(-30deg);
-  }
+
   100% {
     transform: rotate(0deg);
   }
 }
 
+@keyframes shakePlayer {
+  0% {
+    transform: rotate(30deg);
+  }
+
+  25% {
+    transform: rotate(-30deg);
+  }
+
+  50% {
+    transform: rotate(30deg);
+  }
+
+  75% {
+    transform: rotate(-30deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+
+
+
+
+.imagem_botão_escolha{
+  width: 70px;
+  height: 70px;
+  transition: transform 0.3s ease-in-out;
+
+}
+
+.imagem_botão_escolha:hover{
+  transform: scale(1.9);
+  animation: balanco 0.5s ease-in-out;
+}
+
+@keyframes balanco {
+  0%, 100% {
+      transform: rotate(-5deg) scale(1.9);
+  }
+  50% {
+      transform: rotate(5deg) scale(1.9);
+  }
+}

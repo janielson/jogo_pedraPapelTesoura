@@ -1,7 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
-  configurarAcoesDoJogo();
-  iniciarDigitacao(dialogos);
-});
+document.addEventListener('DOMContentLoaded', function () {configurarAcoesDoJogo(); iniciarDigitacao(dialogos);});
 
 let dialogos = [
   'Olá, seja bem-vindo!',
@@ -83,4 +80,3 @@ function configurarAcoesDoJogo() {
     });
   });
 }
-
