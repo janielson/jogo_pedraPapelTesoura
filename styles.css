@@ -50,7 +50,8 @@ body {
 
 
 .img-background-aplication {
-  height: 500px;
+  height: 400px;
+  
 }
 
 .content-paper-stone-scissors_img-marca {
@@ -152,7 +153,11 @@ body {
   display: block;
   background-color: rgba(254, 254, 255, 0.363);
   width: 600px;
-  margin: 100px auto;
+  margin: 0 auto;
+  width: fit-content;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 573px;
   border-radius: 8px;
   transition: all 0.3s ease;
   animation: pulse 1.8s infinite;
@@ -280,27 +285,82 @@ body {
 
 
 
-.imagem_botão_escolha{
+.imagem_botão_escolha {
   width: 70px;
   height: 70px;
   transition: transform 0.3s ease-in-out;
 
 }
 
-.imagem_botão_escolha:hover{
+.imagem_botão_escolha:hover {
   transform: scale(1.9);
   animation: balanco 0.5s ease-in-out;
 }
 
 @keyframes balanco {
-  0%, 100% {
-      transform: rotate(-5deg) scale(1.9);
+
+  0%,
+  100% {
+    transform: rotate(-5deg) scale(1.9);
   }
+
   50% {
-      transform: rotate(5deg) scale(1.9);
+    transform: rotate(5deg) scale(1.9);
   }
 }
 
-.options_buttons{
+
+
+.options__buttons__reset {
+  position: relative;
+  top: -442px;
+  left: 1286px;
+  color: aliceblue;
+  background-color: transparent;
+  height: 40px;
+  border: 1px solid var(--color-background);
+  font-family: var(--font-playpen);
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 8px;
+
+
+
+
+}
+
+.container-principal {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-botoes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 38px;
+  margin-right: 10px;
+  padding: 10px;
+}
+
+.botao-customizado {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-family: var(--font-playpen);
+  color: azure;
+  background-color: transparent;
+  border: 1px solid var(--color-background-2);
+  padding: 6px;
+  border-radius: 5px;
+  cursor: pointer;
   
+
+  
+
+}
+
+.botao-customizado:hover{
+  background-color: #F3DFB5;
+  border:#F3DFB5;
 }
