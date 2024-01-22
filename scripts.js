@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded', function () {configurarAcoesDoJogo
 let dialogos = [
   'Olá, seja bem-vindo!',
   'Pronto para jogar Jokenpô?',
-  'Escolha Pedra, Papel ou Tesoura e boa sorte!'
+  'Escolha Pedra, Papel ou Tesoura e boa sorte!', 
+   'ola'
 ];
 
 function maquinaDeEscrever(texto, numeroDeCaracteres, elementoDoTexto, callback) {
