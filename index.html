@@ -11,10 +11,13 @@
 
 <body>
   <main class="main">
+    <!-- video de background -->
     <div class="video-background">
       <video autoplay muted loop="infinite"
         src="/videos/Network Connection Background Video, Plexus Dot Connection Background Loop _ Free Stock Footage (720p).mp4"></video>
     </div>
+
+     <!-- conteudo pedra papel e tesoura  -->
     <div class="content-paper-stone-scissors">
       <figure class="content-paper-stone-scissors_imglogo">
         <img class="img-background-aplication-logo" src="/assets/vsrescortada.png" alt="logo da aplicação" />
@@ -26,8 +29,11 @@
         </div>
       </figure>
     </div>
-    <button class="button-iniciar-jogo">VAMOS LÁ?</button>
+    <!--  botão que vai levar para um modal de escolhas  -->
+    <!-- <button class="button-iniciar-jogo">VAMOS LÁ?</button> -->
+    
 
+    <!-- jogo -->
     <div class="container-principal">
       <div class="container-jogo">
 
@@ -38,7 +44,10 @@
           <div class="player">
             <img src="./assets/stoneplayer.png" />
           </div>
+
+          
         </div>
+        
         <div class="points">inteligência<span class="computerPoints"> 0 </span> | <span class="playerPoints"> 0 </span>
           você
         </div>
@@ -47,19 +56,19 @@
           <img class="imagem_botão_escolha" src="./assets/stoneicon.png" alt=""><button type="button">PEDRA</button>
           <img class="imagem_botão_escolha" src="./assets/paper.png" alt=""><button type="button">PAPEL</button>
           <img class="imagem_botão_escolha" src="./assets/scissors.png" alt=""><button type="button">TESOURA</button>
+
+          
   
   
   
         </div>
-  
+
+        
+            
       </div>
-      <div class="container-botoes">
-        
-        <button class="botao-customizado">REINICIAR JOGADAS</button>
-        <button class="botao-customizado">MELHOR DE TRÊS</button>
-        
-        
-      </div>
+
+      <button class="botão-resetar-jogada" id="resetButton">Reiniciar jogada</button>
+
     </div>
 
 
@@ -76,7 +85,6 @@
 
 
     <script src="/scripts.js"></script>
-    <script src="arrays.js"></script>
   </main>
 </body>
 

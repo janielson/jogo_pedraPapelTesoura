@@ -1,10 +1,7 @@
-document.addEventListener('DOMContentLoaded', function () {configurarAcoesDoJogo(); iniciarDigitacao(dialogos);});
-
 let dialogos = [
   'Olá, seja bem-vindo!',
   'Pronto para jogar Jokenpô?',
-  'Escolha Pedra, Papel ou Tesoura e boa sorte!', 
-   'ola'
+  'Escolha Pedra, Papel ou Tesoura e boa sorte!'
 ];
 
 function maquinaDeEscrever(texto, numeroDeCaracteres, elementoDoTexto, callback) {
@@ -34,6 +31,7 @@ function configurarAcoesDoJogo() {
   const computerPoints = document.querySelector(".computerPoints");
   const playerPoints = document.querySelector(".playerPoints");
   const options = document.querySelectorAll(".options button");
+  const resetButton = document.querySelector("#resetButton");
 
   const mapping = {
     "PEDRA": "stone",
@@ -80,4 +78,17 @@ function configurarAcoesDoJogo() {
       }, 900);
     });
   });
+
+  resetButton.addEventListener("click", () => {
+    computerPoints.innerHTML = '0';
+    playerPoints.innerHTML = '0';
+    computer.src = "./assets/stoneComputer.png";
+    player.src = "./assets/stonePlayer.png";
+  });
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+  configurarAcoesDoJogo();
+  iniciarDigitacao(dialogos);
+});
+
