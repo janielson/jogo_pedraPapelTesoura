@@ -35,14 +35,14 @@
 
     <div class="modal-do-usuario">
       <label class="input__usuario" for="textinput"> Quem e o meu Adversário?
-        <input type="text" placeholder="Digite seu nome ou apelido"> 
+        <input type="text" placeholder="Digite seu nome ou apelido" id="inputNome"> 
       </label>
       <label class="input__usuario"  for="textinput">Escolha um numero de jogadas Entre 1 e 10 
-        <input type="number" placeholder="Valor máximo 10 jogadas" min="1" max="10" step="1"oninput="validateNumber(this)">
+        <input type="number" placeholder="Valor máximo 10 jogadas" min="1" max="10" step="1"oninput="validateNumber(this)"  id="inputRodadas">
       </label>
       <p class="paragrafo-de-atencao"> Atenção ! ao iniciar o jogo você terá um tempo a cada jogada de 5 segundos para sua escolha,seja rapido e bom jogo!</p>
 
-      <button class="dados__do__usuario">ESTOU PRONTO</button>
+      <button class="dados__do__usuario" id="botaoPronto">ESTOU PRONTO</button>
 
       
 

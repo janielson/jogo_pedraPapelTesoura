@@ -4,6 +4,9 @@ let dialogos = [
   'Escolha Pedra, Papel ou Tesoura e boa sorte!'
 ];
 
+let numeroTotalDeRodadas;
+let rodadasRestantes;
+
 function maquinaDeEscrever(texto, numeroDeCaracteres, elementoDoTexto, callback) {
   if (numeroDeCaracteres < texto.length) {
     elementoDoTexto.innerHTML = texto.substring(0, numeroDeCaracteres + 1);
@@ -75,6 +78,10 @@ function configurarAcoesDoJogo() {
           else if (computerChoice === "paper")
             playerPoints.innerHTML = pPoints + 1;
         }
+
+        // Atualiza o número de rodadas restantes
+        rodadasRestantes--;
+        atualizarRodadasRestantes(rodadasRestantes);
       }, 900);
     });
   });
@@ -84,11 +91,73 @@ function configurarAcoesDoJogo() {
     playerPoints.innerHTML = '0';
     computer.src = "./assets/stoneComputer.png";
     player.src = "./assets/stonePlayer.png";
+    rodadasRestantes = numeroTotalDeRodadas;
+    atualizarRodadasRestantes(rodadasRestantes);
+    habilitarOpcoesDeJogo();
   });
 }
 
 document.addEventListener('DOMContentLoaded', function () {
   configurarAcoesDoJogo();
   iniciarDigitacao(dialogos);
+
+  document.getElementById('botaoPronto').addEventListener('click', function() {
+    const nomeUsuario = document.getElementById('inputNome').value;
+    numeroTotalDeRodadas = parseInt(document.getElementById('inputRodadas').value);
+
+    if (nomeUsuario && numeroTotalDeRodadas) {
+      rodadasRestantes = numeroTotalDeRodadas;
+      const mensagemPersonalizada = `Olá ${nomeUsuario}, você tem ${numeroTotalDeRodadas} rodadas.`;
+      let elemento = document.querySelector('.balao-de-dialagos p');
+      maquinaDeEscrever(mensagemPersonalizada, 0, elemento, function() {
+        setTimeout(function() {
+          document.querySelector('.modal-do-usuario').style.display = 'none';
+          document.querySelector('.container-principal').style.display = 'block';
+          atualizarRodadasRestantes(rodadasRestantes);
+        }, 1000);
+      });
+    } else {
+      alert('Por favor, preencha todos os campos.');
+    }
+  });
 });
 
+function atualizarRodadasRestantes(rodadas) {
+  let elemento = document.querySelector('.balao-de-dialagos p');
+  if (rodadas > 0) {
+    let mensagemRodadasRestantes = ` ${rodadas} jogadas restantes`;
+    maquinaDeEscrever(mensagemRodadasRestantes, 0, elemento);
+  } else {
+    let mensagemFimDeJogo = "Fim do jogo! Clique em 'Reiniciar jogada' para jogar novamente.";
+    maquinaDeEscrever(mensagemFimDeJogo, 0, elemento);
+    desabilitarOpcoesDeJogo();
+  }
+}
+
+function desabilitarOpcoesDeJogo() {
+  const options = document.querySelectorAll(".options button");
+  options.forEach((option) => {
+    option.disabled = true;
+  });
+}
+
+function habilitarOpcoesDeJogo() {
+  const options = document.querySelectorAll(".options button");
+  options.forEach((option) => {
+    option.disabled = false;
+  });
+}
+
+function validateNumber(input) {
+  if (input.value > 10) {
+    input.value = 10;
+  } else if (input.value < 1 ) {
+    alert("Digite um valor de 1 a 10");
+  }
+}
+
+const botao = document.querySelector('.button-iniciar-jogo');
+botao.addEventListener('click', function () {
+  const modalUsuario = document.querySelector('.modal-do-usuario');
+  modalUsuario.style.display = 'flex';
+});
