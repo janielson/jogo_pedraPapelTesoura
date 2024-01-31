@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (nomeUsuario && numeroTotalDeRodadas) {
       rodadasRestantes = numeroTotalDeRodadas;
-      const mensagemPersonalizada = `Olá ${nomeUsuario}, você tem ${numeroTotalDeRodadas} rodadas.`;
+      const mensagemPersonalizada = `Olá ${nomeUsuario},você determinou ${numeroTotalDeRodadas} jogadas.`;
       let elemento = document.querySelector('.balao-de-dialagos p');
       maquinaDeEscrever(mensagemPersonalizada, 0, elemento, function() {
         setTimeout(function() {
@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function () {
 function atualizarRodadasRestantes(rodadas) {
   let elemento = document.querySelector('.balao-de-dialagos p');
   if (rodadas > 0) {
-    let mensagemRodadasRestantes = ` ${rodadas} jogadas restantes`;
+    let mensagemRodadasRestantes = `você tem ${rodadas} jogadas`;
     maquinaDeEscrever(mensagemRodadasRestantes, 0, elemento);
   } else {
     let mensagemFimDeJogo = "Fim do jogo! Clique em 'Reiniciar jogada' para jogar novamente.";
