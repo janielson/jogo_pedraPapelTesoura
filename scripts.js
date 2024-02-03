@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function () {
           document.querySelector('.modal-do-usuario').style.display = 'none';
           document.querySelector('.container-principal').style.display = 'block';
           atualizarRodadasRestantes(rodadasRestantes);
-        }, 20);
+        }, 18);
       });
     } else {
       alert('Por favor, preencha todos os campos.');

@@ -16,8 +16,8 @@ body {
 .main {
   display: flex;
   flex-direction: column;
-  
-  
+
+
 }
 
 .video-background {
@@ -90,9 +90,8 @@ body {
   box-shadow: 0 0 10px rgba(0, 255, 255, 0.7),
     0 0 20px rgba(0, 255, 255, 0.7),
     0 0 30px rgba(0, 255, 255, 0.7);
-    padding: 20px;
-    margin: 0 416px
-
+  padding: 20px;
+  margin: 0 416px
 }
 
 
@@ -104,7 +103,7 @@ body {
   height: 150px;
   margin-bottom: 26px;
   margin-top: 26px;
-  
+
 }
 
 .computer img,
@@ -259,14 +258,29 @@ body {
 }
 
 .container-principal {
+
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  margin-top: 20px;
-  margin-left: 144px;
+  width: 100%;
+  max-width: 1678px;
+  margin: 0 auto;
+  padding: 20px;
   display: none;
 }
 
-.botão-resetar-jogada{
+
+@media only screen and (max-width: 768px) {
+  .container-principal {
+    flex-direction: column;
+    /* Empilha os itens verticalmente em telas menores */
+    padding: 10px;
+  }
+}
+
+
+.botão-resetar-jogada {
   position: relative;
   bottom: -3px;
   left: 24px;
@@ -281,7 +295,7 @@ body {
 
 }
 
-.botão-resetar-jogada:hover{
+.botão-resetar-jogada:hover {
   background-color: #F3DFB5;
 
 }
@@ -289,20 +303,24 @@ body {
 
 /* estilos da tabela de resultados */
 
-.tabela-de-resultados{
+.tabela-de-resultados {
   position: relative;
   width: 1012px;
- margin: 0px 40px;
+  margin: 0px 40px;
 }
+
 table {
   border-collapse: collapse;
   width: 100%;
 }
-th, td {
+
+th,
+td {
   border: 1px solid black;
   text-align: center;
   padding: 8px;
 }
+
 th {
   background-color: #f2f2f2;
 }
@@ -315,17 +333,17 @@ th {
 
 }
 
-.modal{
+.modal {
   border-radius: 20px;
   background-color: rgba(254, 254, 255, 0.363);
   display: none;
-  
-  
 
-  
- 
-  
-  animation: mover-modal 2s ease ;
+
+
+
+
+
+  animation: mover-modal 2s ease;
 
 }
 
@@ -339,8 +357,8 @@ th {
   height: 300px;
   margin-top: 100px;
   display: flex;
-  justify-content: center ;
-  
+  justify-content: center;
+
 
 }
 
@@ -349,7 +367,7 @@ th {
 
   0% {
     visibility: hidden;
-    top:-1200px;
+    top: -1200px;
     display: flex;
 
   }
@@ -359,13 +377,13 @@ th {
     display: flex;
     align-items: center;
     top: 0;
-    
+
 
   }
-  
+
 }
 
-.button-iniciar-jogo{
+.button-iniciar-jogo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -382,13 +400,15 @@ th {
 }
 
 @keyframes blink {
-  50% { opacity: 0; }
+  50% {
+    opacity: 0;
+  }
 }
 
-.button-iniciar-jogo:hover{
+.button-iniciar-jogo:hover {
   background-color: #F3DFB5;
   border: #06e7f7;
-  
+
   animation: none;
 }
 
@@ -401,7 +421,7 @@ th {
   padding: 40px;
   border: 1px solid #ccc;
   border-radius: 30px 0px 30px 0px;
-  margin: 40px auto;
+  margin: 80px auto;
   max-width: 400px;
   box-shadow: 0 4px 8px rgb(0, 0, 0);
   background: linear-gradient(to right, rgba(169, 169, 169, 0.4), rgba(169, 169, 169, 0.7));
@@ -415,16 +435,17 @@ th {
 }
 
 @keyframes mover-modal {
- 0% {
-   opacity: 0;
-   visibility: visible;
- }
+  0% {
+    opacity: 0;
+    visibility: visible;
+  }
+
   100% {
 
     opacity: 1;
     visibility: visible;
     top: 735px;
-  
+
 
   }
 }
@@ -438,34 +459,38 @@ th {
   display: block;
   font-weight: 500;
   font-family: var(--font-poppins);
-  color:#050505;
+  color: #050505;
   text-align: center;
 
-  
+
 }
 
 .input__usuario input[type="text"],
 .input__usuario input[type="number"] {
   width: 100%;
-  padding: 10px;
+  padding: 15px;
   margin-top: 5px;
   border: none;
-  border-radius: 30px;
+  border-radius: 18px;
   box-sizing: border-box;
+  text-align: center;
+  font-weight: 700;
+  color:var(--color-background-2);
+  font-size: 20px;
 }
 
 .dados__do__usuario {
   padding: 10px 20px;
-  background-color:#9BE0E0;
+  background-color: #9BE0E0;
   color: rgb(10, 10, 10);
   border: none;
-  border-radius: 5px;
+  border-radius: 16px;
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s;
 }
 
-.dados__do__usuario:hover{
+.dados__do__usuario:hover {
   background-color: #F3DFB5;
   border: #131212;
 }
