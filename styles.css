@@ -455,27 +455,26 @@ th {
 
 .input__usuario {
   margin-bottom: 15px;
-  font-size: 16px;
+  font-size: 20px;
   display: block;
   font-weight: 500;
   font-family: var(--font-poppins);
   color: #050505;
-  text-align: center;
+  text-align: start;
 
 
 }
 
 .input__usuario input[type="text"],
 .input__usuario input[type="number"] {
-  width: 100%;
-  padding: 15px;
-  margin-top: 5px;
+  width: 105%;
+  padding: 14px;
+  margin-top: 8px;
   border: none;
   border-radius: 18px;
-  box-sizing: border-box;
   text-align: center;
   font-weight: 700;
-  color:var(--color-background-2);
+  color:rgb(13, 13, 13);
   font-size: 20px;
 }
 
