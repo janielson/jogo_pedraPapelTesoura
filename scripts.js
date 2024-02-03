@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function () {
           document.querySelector('.modal-do-usuario').style.display = 'none';
           document.querySelector('.container-principal').style.display = 'block';
           atualizarRodadasRestantes(rodadasRestantes);
-        }, 1000);
+        }, 20);
       });
     } else {
       alert('Por favor, preencha todos os campos.');
@@ -160,4 +160,12 @@ const botao = document.querySelector('.button-iniciar-jogo');
 botao.addEventListener('click', function () {
   const modalUsuario = document.querySelector('.modal-do-usuario');
   modalUsuario.style.display = 'flex';
+});
+
+
+let botaoFechaModal = document.getElementById("fechar__modal");
+
+botaoFechaModal.addEventListener("click", function () {
+  let modalUsuario = document.querySelector(".modal-do-usuario");
+  modalUsuario.style.display = 'none'; // Correção aplicada aqui
 });

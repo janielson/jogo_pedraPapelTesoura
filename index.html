@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="./reset.css" />
   <link rel="stylesheet" href="/styles.css" />
   <title>JOKENPÔ</title>
@@ -24,23 +25,25 @@
       </figure>
       <figure class="content-paper-stone-scissors_img-marca">
         <img class="img-background-aplication" src="/assets/artificial.png" alt="imagem da marca" />
-        <div class="balao-de-dialagos">
-          <p class="ola-seja-bem-vindo"></p>
-        </div>
+       
       </figure>
     </div>
+    <div class="balao-de-dialagos">
+      <p class="ola-seja-bem-vindo"></p>
+      <button class="button-iniciar-jogo"> VAMOS LÁ ? </button>
+    </div>
     
-    <button class="button-iniciar-jogo">E AI VAMOS LÁ ? </button>
+    
 
 
     <div class="modal-do-usuario">
+      <i class='bx bxs-message-square-x' id="fechar__modal"></i>
       <label class="input__usuario" for="textinput"> Quem e o meu Adversário?
         <input type="text" placeholder="Digite seu nome ou apelido" id="inputNome"> 
       </label>
       <label class="input__usuario"  for="textinput">Escolha um numero de jogadas Entre 1 e 10 
         <input type="number" placeholder="Valor máximo 10 jogadas" min="1" max="10" step="1"oninput="validateNumber(this)"  id="inputRodadas">
       </label>
-      <p class="paragrafo-de-atencao"> Atenção ! ao iniciar o jogo você terá um tempo a cada jogada de 5 segundos para sua escolha,seja rapido e bom jogo!</p>
 
       <button class="dados__do__usuario" id="botaoPronto">ESTOU PRONTO</button>
 
