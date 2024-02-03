@@ -163,9 +163,9 @@ botao.addEventListener('click', function () {
 });
 
 
-let botaoFechaModal = document.getElementById("fechar__modal");
+let iconeFechaModal = document.getElementById("fechar__modal");
 
-botaoFechaModal.addEventListener("click", function () {
+iconeFechaModal.addEventListener("click", function () {
   let modalUsuario = document.querySelector(".modal-do-usuario");
   modalUsuario.style.display = 'none'; // Correção aplicada aqui
 });
