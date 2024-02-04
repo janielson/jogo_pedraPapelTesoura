@@ -53,7 +53,7 @@ body {
 
 
 .img-background-aplication {
-  height: 400px;
+  height: 240px;
 
 }
 
@@ -282,7 +282,7 @@ body {
 
 .botão-resetar-jogada {
   position: relative;
-  bottom: -3px;
+  bottom: 380px;
   left: 24px;
   font-family: var(--font-playpen);
   text-align: center;
@@ -293,6 +293,20 @@ body {
   cursor: pointer;
   height: fit-content;
 
+}
+
+.botao-abrir-resultado{
+  position: relative;
+  bottom: 380px;
+  left: 24px;
+  font-family: var(--font-playpen);
+  text-align: center;
+  padding: 8px;
+  border-radius: 13px;
+  background-color: rgba(254, 254, 255, 0.363);
+  border: 1px solid var(--color-background-2);
+  cursor: pointer;
+  height: fit-content;
 }
 
 .botão-resetar-jogada:hover {
@@ -420,9 +434,9 @@ th {
   justify-content: center;
   padding: 40px;
   border: 1px solid #ccc;
-  border-radius: 30px 0px 30px 0px;
-  margin: 80px auto;
-  max-width: 400px;
+  border-radius: 16px;
+  margin: -74px auto;
+  max-width: 494px;
   box-shadow: 0 4px 8px rgb(0, 0, 0);
   background: linear-gradient(to right, rgba(169, 169, 169, 0.4), rgba(169, 169, 169, 0.7));
   backdrop-filter: blur(10px);
@@ -474,7 +488,7 @@ th {
   border-radius: 18px;
   text-align: center;
   font-weight: 700;
-  color:rgb(13, 13, 13);
+  color: rgb(13, 13, 13);
   font-size: 20px;
 }
 
@@ -504,9 +518,9 @@ th {
 
 
 #fechar__modal {
-  font-size: 32px;
+  font-size: 35px;
   position: relative;
-  bottom: 20px;
-  left: 170px;
+  bottom: 35px;
+  left: 220px;
   cursor: pointer;
 }
