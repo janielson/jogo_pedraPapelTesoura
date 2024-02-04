@@ -72,16 +72,11 @@
         </div>
 
         <div class="options">
-          <img class="imagem_botão_escolha" src="./assets/stoneicon.png" alt=""><button type="button">PEDRA</button>
-          <img class="imagem_botão_escolha" src="./assets/paper.png" alt=""><button type="button">PAPEL</button>
-          <img class="imagem_botão_escolha" src="./assets/scissors.png" alt=""><button type="button">TESOURA</button>
-
-
-
-
-
+          <img class="imagem_botão_escolha" src="./assets/stoneicon.png" alt=""><button type="button" data-escolha="PEDRA">PEDRA</button>
+          <img class="imagem_botão_escolha" src="./assets/paper.png" alt=""><button type="button" data-escolha="PAPEL">PAPEL</button>
+          <img class="imagem_botão_escolha" src="./assets/scissors.png" alt=""><button type="button" data-escolha="TESOURA">TESOURA</button>
         </div>
-
+        
 
 
 
@@ -94,42 +89,16 @@
       <button class="botao-abrir-resultado" id="tabela"> Abrir resultado </button>
 
 
-      <div class="centralizar">
-        <div class="modal">
-          <section class="tabela-de-resultados">
-            <table>
-              <tr>
-                <th>RODADAS</th>
-                <th>INTELIGÊNCIA</th>
-                <th>VOCÊ</th>
-                <th>RESULTADO DAS RODADAS</th>
-              </tr>
-              <tr>
-                <td>Rodada 1</td>
-                <td>INTELIGÊNCIA: GANHOU | VOCÊ: PERDEU </td>
-                <td>INTELIGÊNCIA: PERDEU | VOCÊ: GANHOU </td>
-                <td>EMPATE ! </td>
-              </tr>
-              <tr>
-                <td>Rodada 2</td>
-                <td>INTELIGÊNCIA: GANHOU | VOCÊ: GANHOU </td>
-                <td>INTELIGÊNCIA: PERDEU | VOCÊ: PERDEU </td>
-                <td>INTELIGÊNCIA VENCEU ! </td>
-              </tr>
-              <tr>
-                <td>Rodada 3</td>
-                <td>INTELIGÊNCIA: GANHOU | VOCÊ: EMPATOU </td>
-                <td>INTELIGÊNCIA: GANHOU | VOCÊ: PERDEU </td>
-                <td>INTELIGÊNCIA VENCEU ! </td>
-              </tr>
-            </table>
-          </section>
-
+      <div class="modal">
+        <div class="tabela-de-jogadas">
+          <!-- Cabeçalhos -->
+          <div class="header">Jogada</div>
+          <div class="header">Sua Escolha</div>
+          <div class="header">Escolha da IA</div>
+          <div class="header">Resultado</div>
         </div>
       </div>
-
-
-    </div>
+      
 
 
 
