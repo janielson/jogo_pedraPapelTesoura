@@ -281,9 +281,7 @@ body {
 
 
 .botão-resetar-jogada {
-  position: relative;
-  bottom: 827px;
-  left: 1210px;
+
   font-family: var(--font-playpen);
   text-align: center;
   padding: 8px;
@@ -312,7 +310,8 @@ body {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
-  z-index: 1000; /* Certifique-se de que o modal esteja acima de outros elementos */
+  z-index: 1000;
+  /* Certifique-se de que o modal esteja acima de outros elementos */
   align-items: center;
   justify-content: center;
 }
@@ -325,46 +324,61 @@ body {
 /* Estilo para a tabela de resultados com grid */
 .tabela-de-jogadas {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 colunas para jogada, sua escolha, escolha da IA, resultado */
-  gap: 10px; /* Espaçamento entre as células do grid */
-  max-height: 400px; /* Altura máxima antes de rolar */
-  overflow-y: auto; /* Permite rolagem vertical */
-  padding: 20px; /* Espaçamento interno */
-  border: 1px solid #ccc; /* Borda para a tabela */
-  background-color: #fff; /* Cor de fundo da tabela */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
-  border-radius: 8px; /* Bordas arredondadas */
-  width: 80%; /* Largura da tabela */
+  grid-template-columns: repeat(4, 1fr);
+  /* 4 colunas para jogada, sua escolha, escolha da IA, resultado */
+  gap: 10px;
+  /* Espaçamento entre as células do grid */
+  max-height: 400px;
+  /* Altura máxima antes de rolar */
+  overflow-y: auto;
+  /* Permite rolagem vertical */
+  padding: 20px;
+  /* Espaçamento interno */
+  border: 1px solid #ccc;
+  /* Borda para a tabela */
+  background-color: #fff;
+  /* Cor de fundo da tabela */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Sombra para dar profundidade */
+  border-radius: 8px;
+  /* Bordas arredondadas */
+  width: 80%;
+  /* Largura da tabela */
 }
 
 /* Estilos para os cabeçalhos da tabela de resultados */
 .tabela-de-jogadas .header {
   font-weight: bold;
   background-color: #f2f2f2;
-  padding: 10px; /* Espaçamento interno para os cabeçalhos */
-  text-align: center; /* Alinha o texto ao centro */
+  padding: 10px;
+  /* Espaçamento interno para os cabeçalhos */
+  text-align: center;
+  /* Alinha o texto ao centro */
 }
 
 /* Estilos para as células da tabela de resultados */
 .tabela-de-jogadas div:not(.header) {
-  text-align: center; /* Alinha o texto das células ao centro */
-  padding: 5px; /* Espaçamento interno para as células */
+  text-align: center;
+  /* Alinha o texto das células ao centro */
+  padding: 5px;
+  /* Espaçamento interno para as células */
 }
 
 /* Estilos adicionais para melhorar a aparência do botão de abrir resultados */
 .botao-abrir-resultado {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
+  font-family: var(--font-playpen);
+  text-align: center;
+  padding: 8px;
+  border-radius: 13px;
+  background-color: rgba(254, 254, 255, 0.363);
+  border: 1px solid var(--color-background-2);
   cursor: pointer;
-  font-size: 16px;
-  margin-top: 20px; /* Espaçamento acima do botão */
+  height: fit-content;
+  /* Espaçamento acima do botão */
 }
 
 .botao-abrir-resultado:hover {
-  background-color: #0056b3;
+  background-color: #F3DFB5;
 }
 
 
@@ -504,3 +518,10 @@ body {
   cursor: pointer;
 }
 
+
+.container-buttons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  margin-left: 30px;
+}
