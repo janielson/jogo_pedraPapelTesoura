@@ -30,12 +30,14 @@ function iniciarDigitacao(dialogos) {
 }
 
 function configurarAcoesDoJogo() {
-  const computer = document.querySelector(".computer img");
-  const player = document.querySelector(".player img");
+
   const computerPoints = document.querySelector(".computerPoints");
   const playerPoints = document.querySelector(".playerPoints");
   const options = document.querySelectorAll(".options button");
-  const resetButton = document.querySelector("#resetButton");
+  const resultadoDasJogadas = document.querySelector(".resultado__jogadas");
+  let computer = document.querySelector(".computer img");
+  let player = document.querySelector(".player img");
+  let resetarJogadas = document.getElementById("resetButton");
 
   const mapping = {
     "PEDRA": "stone",
@@ -52,51 +54,55 @@ function configurarAcoesDoJogo() {
         computer.classList.remove("shakeComputer");
         player.classList.remove("shakePlayer");
 
-        const playerChoice = mapping[option.innerHTML];
-        player.src = "./assets/" + playerChoice + "player.png";
+        const escolhaDoJogador = mapping[option.innerHTML];
+        player.src = "./assets/" + escolhaDoJogador + "Player.png";
 
         const choice = ["stone", "paper", "scissors"];
         let arrayNo = Math.floor(Math.random() * 3);
-        let computerChoice = choice[arrayNo];
-        computer.src = "./assets/" + computerChoice + "Computer.png";
+        let escolhaDaInteligencia = choice[arrayNo];
+        computer.src = "./assets/" + escolhaDaInteligencia + "Computer.png";
 
-        let cPoints = parseInt(computerPoints.innerHTML);
-        let pPoints = parseInt(playerPoints.innerHTML);
+        let pontosDoComputador = parseInt(computerPoints.innerHTML);
+        let pontosDoJogador = parseInt(playerPoints.innerHTML);
 
-        if (playerChoice === "stone") {
-          if (computerChoice === "paper")
-            computerPoints.innerHTML = cPoints + 1;
-          else if (computerChoice === "scissors")
-            playerPoints.innerHTML = pPoints + 1;
-        } else if (playerChoice === "paper") {
-          if (computerChoice === "scissors")
-            computerPoints.innerHTML = cPoints + 1;
-          else if (computerChoice === "stone")
-            playerPoints.innerHTML = pPoints + 1;
+        if ((escolhaDoJogador === "stone" && escolhaDaInteligencia === "paper") ||
+          (escolhaDoJogador === "scissors" && escolhaDaInteligencia === "stone") ||
+          (escolhaDoJogador === "paper" && escolhaDaInteligencia === "scissors")) {
+
+          computerPoints.innerHTML = pontosDoComputador + 1;
+          resultadoDasJogadas.textContent = "EU GANHEI!";
+        } else if (escolhaDoJogador === escolhaDaInteligencia) {
+          resultadoDasJogadas.textContent = "EMPATAMOS!";
         } else {
-          if (computerChoice === "stone")
-            computerPoints.innerHTML = cPoints + 1;
-          else if (computerChoice === "paper")
-            playerPoints.innerHTML = pPoints + 1;
+          playerPoints.innerHTML = pontosDoJogador + 1;
+          resultadoDasJogadas.textContent = "VOCÊ GANHOU!";
         }
 
-        // Atualiza o número de rodadas restantes
+
         rodadasRestantes--;
         atualizarRodadasRestantes(rodadasRestantes);
-      }, 900);
+      }, 700);
     });
   });
-
-  resetButton.addEventListener("click", () => {
-    computerPoints.innerHTML = '0';
-    playerPoints.innerHTML = '0';
-    computer.src = "./assets/stoneComputer.png";
-    player.src = "./assets/stonePlayer.png";
-    rodadasRestantes = numeroTotalDeRodadas;
-    atualizarRodadasRestantes(rodadasRestantes);
-    habilitarOpcoesDeJogo();
-  });
 }
+
+resetButton.addEventListener("click", () => {
+  pontosDoComputador.innerHTML = '0';
+  pontosDoJogador.innerHTML = '0';
+  computer.src = "./assets/stoneComputer.png";
+  player.src = "./assets/stonePlayer.png";
+  rodadasRestantes = numeroTotalDeRodadas; // Certifique-se de que esta variável foi definida com um valor inicial.
+  atualizarRodadasRestantes(rodadasRestantes);
+  habilitarOpcoesDeJogo();
+  numeroDaJogada = 0; // Resetar o contador de jogadas
+  limparTabelaDeJogadas(); // Função para limpar a tabela de jogadas, precisa ser implementada
+});
+
+function limparTabelaDeJogadas() {
+  const container = document.querySelector('.tabela-de-jogadas');
+  container.innerHTML = ''; // Limpa o conteúdo da tabela de jogadas
+}
+
 
 document.addEventListener('DOMContentLoaded', function () {
   configurarAcoesDoJogo();
