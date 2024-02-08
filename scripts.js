@@ -86,29 +86,11 @@ function configurarAcoesDoJogo() {
   });
 }
 
-resetButton.addEventListener("click", () => {
-  pontosDoComputador.innerHTML = '0';
-  pontosDoJogador.innerHTML = '0';
-  computer.src = "./assets/stoneComputer.png";
-  player.src = "./assets/stonePlayer.png";
-  rodadasRestantes = numeroTotalDeRodadas; // Certifique-se de que esta variável foi definida com um valor inicial.
-  atualizarRodadasRestantes(rodadasRestantes);
-  habilitarOpcoesDeJogo();
-  numeroDaJogada = 0; // Resetar o contador de jogadas
-  limparTabelaDeJogadas(); // Função para limpar a tabela de jogadas, precisa ser implementada
-});
-
-function limparTabelaDeJogadas() {
-  const container = document.querySelector('.tabela-de-jogadas');
-  container.innerHTML = ''; // Limpa o conteúdo da tabela de jogadas
-}
-
-
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
   configurarAcoesDoJogo();
   iniciarDigitacao(dialogos);
 
-  document.getElementById('botaoPronto').addEventListener('click', function () {
+  document.getElementById('botaoPronto').addEventListener('click', function() {
     const nomeUsuario = document.getElementById('inputNome').value;
     numeroTotalDeRodadas = parseInt(document.getElementById('inputRodadas').value);
 
@@ -116,30 +98,77 @@ document.addEventListener('DOMContentLoaded', function () {
       rodadasRestantes = numeroTotalDeRodadas;
       const mensagemPersonalizada = `Olá ${nomeUsuario}, você determinou ${numeroTotalDeRodadas} jogadas.`;
       let elemento = document.querySelector('.balao-de-dialagos p');
-      maquinaDeEscrever(mensagemPersonalizada, 0, elemento, function () {
-        setTimeout(function () {
+      maquinaDeEscrever(mensagemPersonalizada, 0, elemento, function() {
+        setTimeout(function() {
           document.querySelector('.modal-do-usuario').style.display = 'none';
           document.querySelector('.container-principal').style.display = 'block';
           atualizarRodadasRestantes(rodadasRestantes);
-        }, 1800); // Aumentei o tempo para 1800ms
+        }, 1800);
       });
     } else {
       alert('Por favor, preencha todos os campos.');
     }
   });
 
-  document.getElementById('fechar__modal').addEventListener("click", function () {
-    let modalUsuario = document.querySelector(".modal-do-usuario");
-    modalUsuario.style.display = 'none';
+  document.getElementById('fechar__modal').addEventListener("click", function() {
+    document.querySelector(".modal-do-usuario").style.display = 'none';
   });
 
-  document.getElementById("tabela").addEventListener("click", function () {
-    let tabela = document.querySelector(".modal");
-    tabela.style.display = 'flex';
+  document.getElementById("tabela").addEventListener("click", function() {
+    document.querySelector(".modal").style.display = 'flex';
   });
 
-  // Resto do código permanece o mesmo
+  document.querySelector('.button-iniciar-jogo').addEventListener('click', function() {
+    document.querySelector('.modal-do-usuario').style.display = 'flex';
+  });
+
+  // Adicionando a ação de resetar as jogadas
+  document.getElementById("resetButton").addEventListener("click", function() {
+    resetarJogo();
+  });
+  
+  // Fechar modal ao clicar fora
+  document.querySelector('.modal').addEventListener('click', function(e) {
+    if (e.target === this) {
+      this.classList.remove('mostrar');
+    }
+  });
 });
+
+function resetarJogo() {
+  const computerPoints = document.querySelector(".computerPoints");
+  const playerPoints = document.querySelector(".playerPoints");
+  let computer = document.querySelector(".computer img");
+  let player = document.querySelector(".player img");
+  
+  // Resetando os pontos
+  computerPoints.innerHTML = '0';
+  playerPoints.innerHTML = '0';
+  
+  // Resetando as imagens para o estado inicial
+  computer.src = "./assets/stoneComputer.png";
+  player.src = "./assets/stonePlayer.png";
+  
+  // Resetar rodadas restantes e número da jogada
+  rodadasRestantes = numeroTotalDeRodadas; 
+  numeroDaJogada = 1;
+  atualizarRodadasRestantes(rodadasRestantes);
+  
+  // Limpando a tabela de resultados, se necessário
+  limparTabelaDeJogadas();
+}
+
+function limparTabelaDeJogadas() {
+  const container = document.querySelector('.tabela-de-jogadas');
+  // Limpa e recria os cabeçalhos da tabela
+  container.innerHTML = '<div class="header">Jogada</div><div class="header">Sua Escolha</div><div class="header">Escolha da IA</div><div class="header">Resultado</div>';
+}
+
+// Implemente as outras funções necessárias aqui (configurarAcoesDoJogo, iniciarDigitacao, etc.)
+
+
+
+
 
 function atualizarRodadasRestantes(rodadas) {
   let elemento = document.querySelector('.balao-de-dialagos p');
@@ -152,94 +181,6 @@ function atualizarRodadasRestantes(rodadas) {
     desabilitarOpcoesDeJogo();
   }
 }
-
-function desabilitarOpcoesDeJogo() {
-  const options = document.querySelectorAll(".options button");
-  options.forEach((option) => {
-    option.disabled = true;
-  });
-}
-
-function habilitarOpcoesDeJogo() {
-  const options = document.querySelectorAll(".options button");
-  options.forEach((option) => {
-    option.disabled = false;
-  });
-}
-
-function validateNumber(input) {
-  if (input.value > 10) {
-    input.value = 10;
-  } else if (input.value < 1) {
-    alert("Digite um valor de 1 a 10");
-  }
-}
-
-const botao = document.querySelector('.button-iniciar-jogo');
-botao.addEventListener('click', function () {
-  const modalUsuario = document.querySelector('.modal-do-usuario');
-  modalUsuario.style.display = 'flex';
-});
-
-let tabelaDeResultado = document.getElementById("tabela");
-tabelaDeResultado.addEventListener("click", function () {
-  let tabela = document.querySelector(".modal");
-  tabela.style.display = 'flex';
-});
-
-// script para atualizar a tabela;
-
-document.addEventListener('DOMContentLoaded', function () {
-
-  document.querySelectorAll('.options button').forEach(opcao => {
-    opcao.addEventListener('click', function () {
-      const escolhaJogador = this.getAttribute('data-escolha');
-      jogar(escolhaJogador);
-    });
-  });
-
-  document.querySelector('.modal').addEventListener('click', function (e) {
-    if (e.target === this) {
-      this.classList.remove('mostrar');
-    }
-  });
-});
-
-function jogar(escolhaJogador) {
-  const escolhas = ['PEDRA', 'PAPEL', 'TESOURA'];
-  const escolhaIA = escolhas[Math.floor(Math.random() * escolhas.length)];
-  const resultado = determinarVencedor(escolhaJogador, escolhaIA);
-
-  adicionarJogada(numeroDaJogada, escolhaJogador, escolhaIA, resultado);
-  numeroDaJogada++;
-}
-
-function adicionarJogada(jogadaNum, escolhaJogador, escolhaIA, resultado) {
-  const container = document.querySelector('.tabela-de-jogadas');
-  container.append(criarDivComTexto(`Jogada ${jogadaNum}`));
-  container.append(criarDivComTexto(escolhaJogador));
-  container.append(criarDivComTexto(escolhaIA));
-  container.append(criarDivComTexto(resultado));
-}
-
-function criarDivComTexto(texto) {
-  const div = document.createElement('div');
-  div.textContent = texto;
-  return div;
-}
-
-function determinarVencedor(jogador, ia) {
-  if (jogador === ia) return 'EMPATE';
-  if ((jogador === 'PEDRA' && ia === 'TESOURA') ||
-    (jogador === 'PAPEL' && ia === 'PEDRA') ||
-    (jogador === 'TESOURA' && ia === 'PAPEL')
-    || (jogador === 'PAPEL' && ia === 'TESOURA')) {
-    return 'VOCÊ GANHOU';
-  } else {
-    return 'IA GANHOU';
-  }
-}
-
 
 
 
