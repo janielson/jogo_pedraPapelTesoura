@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function () {
           document.querySelector('.modal-do-usuario').style.display = 'none';
           document.querySelector('.container-principal').style.display = 'block';
           atualizarRodadasRestantes(rodadasRestantes);
-        }, 1800); 
+        }, 1800); // Aumentei o tempo para 1800ms
       });
     } else {
       alert('Por favor, preencha todos os campos.');
@@ -134,12 +134,12 @@ document.addEventListener('DOMContentLoaded', function () {
 function atualizarRodadasRestantes(rodadas) {
   let elemento = document.querySelector('.balao-de-dialagos p');
   if (rodadas > 0) {
-    let mensagemRodadasRestantes = `você tem ${rodadas} jogada restante.`;
+    let mensagemRodadasRestantes = `você tem ${rodadas} jogadas restantes.`;
     maquinaDeEscrever(mensagemRodadasRestantes, 0, elemento);
   } else {
     let mensagemFimDeJogo = "Fim do jogo! Clique em 'Reiniciar jogada' para jogar novamente.";
     maquinaDeEscrever(mensagemFimDeJogo, 0, elemento);
-  
+    // Adicione aqui a função para desabilitar as opções de jogo, caso exista.
   }
 }
 
@@ -147,6 +147,6 @@ function validateNumber(input) {
   if (input.value > 10) {
     input.value = 10;
   } else if (input.value < 1) {
-    input.value = 1; 
+    input.value = 1; // Corrigido para definir o valor mínimo como 1 ao invés de alertar
   }
 }
