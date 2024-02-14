@@ -313,66 +313,35 @@ body {
 
 /* Estilo para o modal que contém a tabela de resultados */
 .modal {
+  position: absolute;
   display: none;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 1000;
-  /* Certifique-se de que o modal esteja acima de outros elementos */
-  align-items: center;
-  justify-content: center;
+   /* height: 450px; */
+  width: 500px;
+  border: 1px solid red;
+  left: 50%;
+  transform: translateX(-50%);
+  visibility: hidden;
+  animation: mostrarModal 1s ease forwards;
 }
 
-/* Mostra o modal quando necessário */
-.modal.mostrar {
-  display: flex;
+@keyframes mostrarModal {
+  0%{
+  
+    visibility: visible;
+    top:-10000px;
+
+  }
+  100%{
+    visibility: visible;
+
+    /* posição original */
+    top: 493px;
+  }  
 }
 
-/* Estilo para a tabela de resultados com grid */
-.tabela-de-jogadas {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  /* 4 colunas para jogada, sua escolha, escolha da IA, resultado */
-  gap: 10px;
-  /* Espaçamento entre as células do grid */
-  max-height: 400px;
-  /* Altura máxima antes de rolar */
-  overflow-y: auto;
-  /* Permite rolagem vertical */
-  padding: 20px;
-  /* Espaçamento interno */
-  border: 1px solid #ccc;
-  /* Borda para a tabela */
-  background-color: #fff;
-  /* Cor de fundo da tabela */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* Sombra para dar profundidade */
-  border-radius: 8px;
-  /* Bordas arredondadas */
-  width: 80%;
-  /* Largura da tabela */
-}
 
-/* Estilos para os cabeçalhos da tabela de resultados */
-.tabela-de-jogadas .header {
-  font-weight: bold;
-  background-color: #f2f2f2;
-  padding: 10px;
-  /* Espaçamento interno para os cabeçalhos */
-  text-align: center;
-  /* Alinha o texto ao centro */
-}
 
-/* Estilos para as células da tabela de resultados */
-.tabela-de-jogadas div:not(.header) {
-  text-align: center;
-  /* Alinha o texto das células ao centro */
-  padding: 5px;
-  /* Espaçamento interno para as células */
-}
+
 
 /* Estilos adicionais para melhorar a aparência do botão de abrir resultados */
 .botao-abrir-resultado {

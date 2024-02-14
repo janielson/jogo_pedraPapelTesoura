@@ -1,3 +1,7 @@
+
+const botaoTabela = document.querySelector(".botao-abrir-resultado");
+const modalTabela = document.querySelector('.modal');
+
 let dialogos = [
   'Olá, seja bem-vindo!',
   'Pronto para jogar Jokenpô?',
@@ -38,6 +42,7 @@ function configurarAcoesDoJogo() {
   let computer = document.querySelector(".computer img");
   let player = document.querySelector(".player img");
   let resetarJogadas = document.getElementById("resetButton");
+
 
   const mapping = {
     "PEDRA": "stone",
@@ -95,6 +100,7 @@ function configurarAcoesDoJogo() {
   });
 }
 
+// ===================================================================== 
 document.addEventListener('DOMContentLoaded', function () {
   configurarAcoesDoJogo();
   iniciarDigitacao(dialogos);
@@ -131,6 +137,10 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+
+// ===================================================================== 
+
+
 function atualizarRodadasRestantes(rodadas) {
   let elemento = document.querySelector('.balao-de-dialagos p');
   if (rodadas > 0) {
@@ -150,3 +160,10 @@ function validateNumber(input) {
     input.value = 1; // Corrigido para definir o valor mínimo como 1 ao invés de alertar
   }
 }
+
+
+
+
+botaoTabela.addEventListener('click', function() {
+  modalTabela.style.display = 'block'
+});
