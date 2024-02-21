@@ -73,7 +73,7 @@ body {
 
 }
 
-.content-paper-stone-scissors_imglogo{
+.content-paper-stone-scissors_imglogo {
   display: flex;
   justify-content: space-between;
 }
@@ -315,35 +315,60 @@ body {
 .modal {
   position: absolute;
   display: none;
-   /* height: 450px; */
-  width: 500px;
-  border: 1px solid red;
-  left: 50%;
+  width: 550px;
+  left: 15%;
   transform: translateX(-50%);
   visibility: hidden;
-  animation: mostrarModal 1s ease forwards;
+  border-radius: 7px;
+  box-shadow: 3px 3px 8px -2px var(--color-background);
+  animation: mostrarModal 2s ease forwards;
+  background-color: #1312121d;
+
+
 }
 
+
+
 @keyframes mostrarModal {
-  0%{
-  
+  0% {
+
     visibility: visible;
-    top:-10000px;
+    top: -600px;
 
   }
-  100%{
+
+  100% {
     visibility: visible;
 
     /* posição original */
-    top: 493px;
-  }  
+    top: 500px;
+  }
+}
+
+
+.tabela-de-jogadas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 10px;
+
+}
+
+.header,
+.jogada-item {
+  text-align: center;
+  padding: 5px;
+  border: 2px solid var(--color-background);
+  color: #00ffcb;
+  border-radius: 10px;
 }
 
 
 
 
 
-/* Estilos adicionais para melhorar a aparência do botão de abrir resultados */
+
+
 .botao-abrir-resultado {
   font-family: var(--font-playpen);
   text-align: center;
@@ -353,7 +378,7 @@ body {
   border: 1px solid var(--color-background-2);
   cursor: pointer;
   height: fit-content;
-  /* Espaçamento acima do botão */
+
 }
 
 .botao-abrir-resultado:hover {
@@ -361,7 +386,7 @@ body {
 }
 
 
-/* ------------------ */
+
 
 
 
