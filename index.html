@@ -1,137 +1,124 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="stylesheet" href="./reset.css" />
-  <link rel="stylesheet" href="/styles.css" />
-  <title>JOKENPÔ</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
+      rel='stylesheet'>
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="/styles.css" />
+    <title>JOKENPÔ</title>
+  </head  >
 
-<body>
-  
+  <body>
 
-  <div class="modal">
-    <div class="tabela-de-jogadas">
-      <div class="header">Jogadas</div>
-      <div class="header">Sua Escolha</div>
-      <div class="header">Escolha da IA</div>
-      <div class="header">Resultado</div>
-    </div>
-  </div>
-  
+    <ul class="tabela">
+        <li class="linha-titulo">
+          <ul class="colunas">
+            <li class="coluna">Jogadas</li>
+            <li class="coluna">Sua Escolha</li>
+            <li class="coluna">Escolha da IA</li>
+            <li class="coluna">Resultado</li>
+          </ul>
+        </li>
 
-  <main class="main">
-    <!-- video de background -->
-    <div class="video-background">
-      <video autoplay muted loop="infinite"
-        src="/videos/Network Connection Background Video, Plexus Dot Connection Background Loop _ Free Stock Footage (720p).mp4"></video>
-    </div>
+        <li class="linha-dados">
+          <ul class="colunas">
+            <li class="coluna"></li>
+            <li class="coluna"></li>
+            <li class="coluna"></li>
+            <li class="coluna"></li>
+          </ul>
+        </li>
+      </div>
+    </ul>
 
-    <!-- conteudo pedra papel e tesoura  -->
-    <div class="content-paper-stone-scissors">
-  
-      <figure class="content-paper-stone-scissors_imglogo">
-        <img class="img-background-aplication-logo" src="/assets/vsrescortada.png" alt="logo da aplicação" />
+    <main class="main">
+      <!-- video de background -->
+      <div class="video-background">
+        <video autoplay muted loop="infinite"
+          src="/videos/Network Connection Background Video, Plexus Dot Connection Background Loop _ Free Stock Footage (720p).mp4"></video>
+      </div>
 
-        <div class="container-buttons">
-          <button class="botão-resetar-jogada" id="resetButton">Reiniciar jogada</button>
-          <button class="botao-abrir-resultado" id="tabela"> Abrir Resultado Das Jogadas </button>
-      
-        </div>
+      <!-- conteudo pedra papel e tesoura  -->
+      <div class="content-paper-stone-scissors">
 
+        <figure class="content-paper-stone-scissors_imglogo">
+          <img class="img-background-aplication-logo"
+            src="/assets/vsrescortada.png" alt="logo da aplicação" />
 
-      </figure>
-      <figure class="content-paper-stone-scissors_img-marca">
-        <img class="img-background-aplication" src="/assets/artificial.png" alt="imagem da marca" />
+          <div class="container-buttons">
+            <button class="botão-resetar-jogada" id="resetButton">Reiniciar
+              jogada</button>
+            <button class="botao-abrir-resultado" id="tabela"> Abrir Resultado
+              Das Jogadas </button>
 
-      </figure>
-    </div>
-    <div class="balao-de-dialagos">
-      <p class="ola-seja-bem-vindo"></p>
-      <p class="resultado__jogadas"></p>
-      <button class="button-iniciar-jogo"> VAMOS LÁ ? </button>
-    </div>
-    
-    
-
-
-    <div class="modal-do-usuario">
-      <i class='bx bxs-message-square-x' id="fechar__modal"></i>
-      <label class="input__usuario" for="textinput"> Quem e o meu Adversário?
-        <input type="text" placeholder="Digite seu nome ou apelido" id="inputNome"> 
-      </label>
-      <label class="input__usuario"  for="textinput">Escolha um numero de jogadas Entre 1 e 10 
-        <input type="number" placeholder="Valor máximo 10 jogadas" min="1" max="10" step="1"oninput="validateNumber(this)"  id="inputRodadas">
-      </label>
-
-      <button class="dados__do__usuario" id="botaoPronto">ESTOU PRONTO</button>
-
-      
-
-    </div>
-
-    
-
-
-    <div class="container-principal">
-      <div class="container-jogo">
-
-        <div class="images">
-          <div class="computer">
-            <img src="./assets/stonecomputer.png" />
-          </div>
-          <div class="player">
-            <img src="./assets/stoneplayer.png" />
           </div>
 
+        </figure>
+        <figure class="content-paper-stone-scissors_img-marca">
+          <img class="img-background-aplication" src="/assets/artificial.png"
+            alt="imagem da marca" />
+          <li class="teste"></li>
+        </figure>
+      </div>
+      <div class="balao-de-dialagos">
+        <p class="ola-seja-bem-vindo"></p>
+        <p class="resultado__jogadas"></p>
+        <button class="button-iniciar-jogo"> VAMOS LÁ ? </button>
+      </div>
 
-        </div>
+      <div class="modal-do-usuario">
+        <i class='bx bxs-message-square-x' id="fechar__modal"></i>
+        <label class="input__usuario" for="textinput"> Quem e o meu Adversário?
+          <input type="text" placeholder="Digite seu nome ou apelido"
+            id="inputNome">
+        </label>
+        <label class="input__usuario" for="textinput">Escolha um numero de
+          jogadas Entre 1 e 10
+          <input type="number" placeholder="Valor máximo 10 jogadas" min="1"
+            max="10" step="1" oninput="validateNumber(this)" id="inputRodadas">
+        </label>
 
-        <div class="points">inteligência<span class="computerPoints"> 0 </span> | <span class="playerPoints"> 0 </span>
-          você
-        </div>
-
-        <div class="options">
-          <img class="imagem_botão_escolha" src="./assets/stoneicon.png" alt=""><button type="button" data-escolha="PEDRA">PEDRA</button>
-          <img class="imagem_botão_escolha" src="./assets/paper.png" alt=""><button type="button" data-escolha="PAPEL">PAPEL</button>
-          <img class="imagem_botão_escolha" src="./assets/scissors.png" alt=""><button type="button" data-escolha="TESOURA">TESOURA</button>
-        </div>
-        
-
-
-
+        <button class="dados__do__usuario" id="botaoPronto">ESTOU
+          PRONTO</button>
 
       </div>
 
+      <div class="container-principal">
+        <div class="container-jogo">
 
+          <div class="images">
+            <div class="computer">
+              <img src="./assets/stonecomputer.png" />
+            </div>
+            <div class="player">
+              <img src="./assets/stoneplayer.png" />
+            </div>
 
-  
+          </div>
 
+          <div class="points">inteligência<span class="computerPoints"> 0
+            </span> | <span class="playerPoints"> 0 </span>
+            você
+          </div>
 
+          <div class="options">
+            <img class="imagem_botão_escolha" src="./assets/stoneicon.png"
+              alt><button type="button" data-escolha="PEDRA">PEDRA</button>
+            <img class="imagem_botão_escolha" src="./assets/paper.png"
+              alt><button type="button" data-escolha="PAPEL">PAPEL</button>
+            <img class="imagem_botão_escolha" src="./assets/scissors.png"
+              alt><button type="button" data-escolha="TESOURA">TESOURA</button>
+          </div>
 
+        </div>
 
+        <script src="/scripts.js"></script>
+        <script src="./teste.js"></script>
+        <script src="./modal.js"></script>
+      </main>
+    </body>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <script src="/scripts.js"></script>
-    <script src="./modal.js"></script>
-  </main>
-</body>
-
-</html>
+  </html>
