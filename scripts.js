@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function () {
           document.querySelector('.modal-do-usuario').style.display = 'none';
           document.querySelector('.container-principal').style.display = 'block';
           atualizarRodadasRestantes(rodadasRestantes);
-        }, 1000); 
+        }, 75); 
       });
     } else {
       alert('Por favor, preencha todos os campos.');
@@ -144,19 +144,12 @@ document.addEventListener('DOMContentLoaded', function () {
 function atualizarRodadasRestantes(rodadas) {
   let elemento = document.querySelector('.balao-de-dialagos p');
   if (rodadas > 0) {
-    let mensagemRodadasRestantes = `você tem ${rodadas} jogadas.`;
+    let mensagemRodadasRestantes = `você tem ${rodadas} jogada.`;
     maquinaDeEscrever(mensagemRodadasRestantes, 0, elemento);
   } else {
     let mensagemFimDeJogo = "Fim do jogo! Clique em 'Reiniciar jogada' para jogar novamente.";
     maquinaDeEscrever(mensagemFimDeJogo, 0, elemento);
-    // Adicione aqui a função para desabilitar as opções de jogo, caso exista.
+  
   }
 }
 
-
-
-
-
-botaoTabela.addEventListener('click', function() {
-  modalTabela.style.display = 'block'
-});

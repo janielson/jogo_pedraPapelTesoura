@@ -541,14 +541,12 @@ body {
 
 .tabela {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 600px;
+  top: 12%;
+  left: 60%;
+  width: 670px;
   height: 300px;
-  padding: 5px;
-  padding: 0 50px;
-  padding: 10px;
-  background-color: rgba(0, 0, 0, 0.611);
+  padding: 8px;
+  background-color: rgba(254, 254, 255, 0.119);
   border-radius: 10px;
   box-shadow: 0px 0px 10px 5px white;
 
@@ -570,19 +568,21 @@ body {
 }
 
 .coluna {
-  background-color: rgba(255, 0, 0, 0.243);
+  background-color: #642519cb;
   padding: 10px;
+  border-radius: 30px;
+  border: 1px solid var(--color-background);
 }
 
 .coluna-titulo {
   color: #ffffff;
-  font-family: var(--font-poppins);
+  font-family: var(--font-playpen);
   font-size: 16px;
 
 }
 
 .coluna-titulo--dados {
-  color: #3cff00;
+  color: #9BE0E0;
   font-family: var(--font-poppins);
   text-align: center;
 
@@ -591,5 +591,7 @@ body {
 .coluna--principal {
   border-radius: 20px;
   background-color: rgba(0, 0, 0, 0.418);
-  /* padding: 10px; */
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 5px white;
+
 }
