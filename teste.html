@@ -9,22 +9,111 @@
 </head>
 
 <body>
-<section class="pagina">
-  <header class="cabecalho">
+  <ul class="tabela">
+    <li class="linha linha-titulo">
+      <ul class="colunas">
+        <li class="coluna coluna--principal"><p class="coluna-titulo">JOGADAS</p></li>
+        <li class="coluna coluna--principal"><p class="coluna-titulo">SUA ESCOLHA</p></li>
+        <li class="coluna coluna--principal"><p class="coluna-titulo">ESCOLHA DA IA</p></li>
+        <li class="coluna coluna--principal"><p class="coluna-titulo">RESULTADO</p></li>
+       
+      </ul>
+    </li>
 
-  </header>
+    <li class=" linha linha-dados">
+      <ul class="colunas">
+        <li class="coluna coluna--dados"><p class="coluna-titulo coluna-titulo--dados">0</p></li>
+        <li class="coluna coluna--dados"><p class="coluna-titulo coluna-titulo--dados">papel</p></li>
+        <li class="coluna coluna--dados"><p class="coluna-titulo coluna-titulo--dados">tesoura</p></li>
+        <li class="coluna coluna--dados"><p class="coluna-titulo coluna-titulo--dados">ia ganhou</p></li>
+      </ul>
+    </li>
+  </div>
+</ul>
 
+<main class="main">
+  <!-- video de background -->
+  <div class="video-background">
+    <video autoplay muted loop="infinite"
+      src="/videos/Network Connection Background Video, Plexus Dot Connection Background Loop _ Free Stock Footage (720p).mp4"></video>
+  </div>
 
-  <main class="main">
+  <!-- conteudo pedra papel e tesoura  -->
+  <div class="content-paper-stone-scissors">
 
+    <figure class="content-paper-stone-scissors_imglogo">
+      <img class="img-background-aplication-logo"
+        src="/assets/vsrescortada.png" alt="logo da aplicação" />
+
+      <div class="container-buttons">
+        <button class="botão-resetar-jogada" id="resetButton">Reiniciar
+          jogada</button>
+        <button class="botao-abrir-resultado" id="tabela"> Abrir Resultado
+          Das Jogadas </button>
+
+      </div>
+
+    </figure>
+    <figure class="content-paper-stone-scissors_img-marca">
+      <img class="img-background-aplication" src="/assets/artificial.png"
+        alt="imagem da marca" />
+      <li class="teste"></li>
+    </figure>
+  </div>
+  <div class="balao-de-dialagos">
+    <p class="ola-seja-bem-vindo"></p>
+    <p class="resultado__jogadas"></p>
+    <button class="button-iniciar-jogo"> VAMOS LÁ ? </button>
+  </div>
+
+  <div class="modal-do-usuario">
+    <i class='bx bxs-message-square-x' id="fechar__modal"></i>
+    <label class="input__usuario" for="textinput"> Quem e o meu Adversário?
+      <input type="text" placeholder="Digite seu nome ou apelido"
+        id="inputNome">
+    </label>
+    <label class="input__usuario" for="textinput">Escolha um numero de
+      jogadas Entre 1 e 10
+      <input type="number" placeholder="Valor máximo 10 jogadas" min="1"
+        max="10" step="1" oninput="validateNumber(this)" id="inputRodadas">
+    </label>
+
+    <button class="dados__do__usuario" id="botaoPronto">ESTOU
+      PRONTO</button>
+
+  </div>
+
+  <div class="container-principal">
+    <div class="container-jogo">
+
+      <div class="images">
+        <div class="computer">
+          <img src="./assets/stonecomputer.png" />
+        </div>
+        <div class="player">
+          <img src="./assets/stoneplayer.png" />
+        </div>
+
+      </div>
+
+      <div class="points">inteligência<span class="computerPoints"> 0
+        </span> | <span class="playerPoints"> 0 </span>
+        você
+      </div>
+
+      <div class="options">
+        <img class="imagem_botão_escolha" src="./assets/stoneicon.png"
+          alt><button type="button" data-escolha="PEDRA">PEDRA</button>
+        <img class="imagem_botão_escolha" src="./assets/paper.png"
+          alt><button type="button" data-escolha="PAPEL">PAPEL</button>
+        <img class="imagem_botão_escolha" src="./assets/scissors.png"
+          alt><button type="button" data-escolha="TESOURA">TESOURA</button>
+      </div>
+
+    </div>
+
+    <script src="/scripts.js"></script>
   </main>
-
-
-  <footer class="rodape">
-
-  </footer>
-
-</section>
 
 
 <script src="./scriptteste.js"></script>
