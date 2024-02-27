@@ -31,6 +31,12 @@ main {
 
 }
 
+.video-background video{
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  
+}
 
 
 
