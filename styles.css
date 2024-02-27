@@ -10,21 +10,41 @@
 body {
     display: flex;
     min-height: 100vh;
-    background-color: #e3e9f7;
+    min-width: 100vw;
+    background-color: #080808;
+
 }
 
 main {
-    padding: 20px;
     position: fixed;
-    z-index: 1;
-    padding-left: calc(122px + 29px);
+    width: 100%;
+
+
 }
+
+.video-background {
+    position: fixed;
+    width: 100%;
+    object-fit: cover;
+    background: linear-gradient(90deg, black 0%, black 10%, transparent 50%, transparent 100%);
+    opacity: 0.9;
+
+}
+
+
+
+
+
+
+
+
+
 
 #sidebar {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #ffffff;
+    background-color: #04eeffdc;
     height: 100vh;
     border-radius: 0px 18px 18px 0px;
     position: relative;
