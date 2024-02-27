@@ -7,91 +7,72 @@
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="./reset.css" />
   <link rel="stylesheet" href="/styles.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <title>JOKENPÔ</title>
 </head>
 
 <body>
   <nav id="sidebar">
-    <div id="sidebar_content">
-      <div id="user">
-        <img src="src/images/avatar.jpg" id="user_avatar" alt="Avatar">
 
-        <p id="user_infos">
+
+    <ul id="side_items">
+      <li class="side-item active">
+        <a href="#">
+          <i class="material-icons">sports_esports</i>
+          <span class="item-description"> JOGAR AGORA </span>
+        </a>
+      </li>
+
+      <li class="side-item">
+        <a href="#">
+          <i class="material-icons">restart_alt</i>
+          <span class="item-description"> REINICIAR JOGO </span>
+        </a>
+      </li>
+
+      <li class="side-item">
+        <a href="#">
+          <i class="material-icons">table_view</i>
+          <span class="item-description">VERIFICAR JOGADAS</span>
+        </a>
+      </li>
+
+      <li class="side-item">
+        <a href="#">
+          <i class="material-icons">contact_support</i>
+          <span class="item-description">SOBRE O JOKENPÔ</span>
+        </a>
+      </li>
+
+      <li class="side-item">
+        <a href="#">
+          <i class="fa-solid fa-image"></i>
           <span class="item-description">
-            Fulano de Tal
+            Imagens
           </span>
+        </a>
+      </li>
+
+      <li class="side-item">
+        <a href="#">
+          <i class="fa-solid fa-gear"></i>
           <span class="item-description">
-            Lorem Ipsum
+            Configurações
           </span>
-        </p>
-      </div>
+        </a>
+      </li>
+    </ul>
 
-      <ul id="side_items">
-        <li class="side-item active">
-          <a href="#">
-            <i class="fa-solid fa-chart-line"></i>
-            <span class="item-description">
-              Dashboard
-            </span>
-          </a>
-        </li>
-
-        <li class="side-item">
-          <a href="#">
-            <i class="fa-solid fa-user"></i>
-            <span class="item-description">
-              Usuários
-            </span>
-          </a>
-        </li>
-
-        <li class="side-item">
-          <a href="#">
-            <i class="fa-solid fa-bell"></i>
-            <span class="item-description">
-              Notificações
-            </span>
-          </a>
-        </li>
-
-        <li class="side-item">
-          <a href="#">
-            <i class="fa-solid fa-box"></i>
-            <span class="item-description">
-              Produtos
-            </span>
-          </a>
-        </li>
-
-        <li class="side-item">
-          <a href="#">
-            <i class="fa-solid fa-image"></i>
-            <span class="item-description">
-              Imagens
-            </span>
-          </a>
-        </li>
-
-        <li class="side-item">
-          <a href="#">
-            <i class="fa-solid fa-gear"></i>
-            <span class="item-description">
-              Configurações
-            </span>
-          </a>
-        </li>
-      </ul>
-
-      <button id="open_btn">
-        <i id="open_btn_icon" class="fa-solid fa-chevron-right"></i>
-      </button>
+    <button id="open_btn">
+      <i id="open_btn_icon" class="material-icons">arrow_forward_ios</i>
+    </button>
     </div>
 
     <div id="logout">
       <button id="logout_btn">
-        <i class="fa-solid fa-right-from-bracket"></i>
+        <i class="material-icons">logout</i>
         <span class="item-description">
-          Logout
+          ADVERSÁRIO
         </span>
       </button>
     </div>
@@ -99,6 +80,7 @@
 
   <main>
     <h1>Título</h1>
+    
   </main>
 
 
@@ -108,3 +90,5 @@
 </body>
 
 </html>
+
+
