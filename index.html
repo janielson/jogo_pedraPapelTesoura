@@ -1,90 +1,75 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="stylesheet" href="./reset.css" />
-  <link rel="stylesheet" href="/styles.css" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <title>JOKENPÔ</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<body>
-  <nav id="sidebar">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
+      rel='stylesheet'>
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 
+    <title>JOKENPÔ</title>
+  </head>
 
-    <div id="side_items">
-      <div class="side-item active">
-        <a href="#">
-          <i class="material-icons">sports_esports</i>
-          <span class="item-description"> JOGAR AGORA </span>
-        </a>
-      </div>
+  <body>
+    <nav id="sidebar" class="sidebar-css">
+      <ul id="side_items">
+        <li class="side-item active">
+          <a href="#">
+            <i class="material-icons">sports_esports</i>
+            <span class="item-description"> JOGAR AGORA </span> 
+          </a>
+        </li>
 
-      <div class="side-item">
-        <a href="#">
-          <i class="material-icons">restart_alt</i>
-          <span class="item-description"> REINICIAR JOGO </span>
-        </a>
-      </div>
+        <li class="side-item">
+          <a href="#">
+            <i class="material-icons">restart_alt</i>
+            <span class="item-description"> REINICIAR JOGO </span>
+          </a>
+        </li>
 
-      <div class="side-item">
-        <a href="#">
-          <i class="material-icons">table_view</i>
-          <span class="item-description">VERIFICAR JOGADAS</span>
-        </a>
-      </div>
+        <li class="side-item">
+          <a href="#">
+            <i class="material-icons">table_view</i>
+            <span class="item-description">VERIFICAR JOGADAS</span>
+          </a>
+        </li>
 
-      <div class="side-item">
-        <a href="#">
-          <i class="material-icons">contact_support</i>
-          <span class="item-description">SOBRE O JOKENPÔ</span>
-        </a>
-      </div>
+        <li class="side-item">
+          <a href="#">
+            <i class="material-icons">contact_support</i>
+            <span class="item-description">SOBRE O JOKENPÔ</span>
+          </a>
+        </li>
 
+        <li id="logout">
+          <button id="logout_btn">
+            <i class="material-icons">logout</i>
+            <span class="item-description">
+              ADVERSÁRIO
+            </span>
+          </button>
+        </li>
+      </ul>
 
-      
-    </div>
-
-    <button id="open_btn">
-      <i id="open_btn_icon" class="material-icons">arrow_forward_ios</i>
-    </button>
-    </div>
-
-    <div id="logout">
-      <button id="logout_btn">
-        <i class="material-icons">logout</i>
-        <span class="item-description">
-          ADVERSÁRIO
-        </span>
+      <button id="open_btn">
+        <i id="open_btn_icon" class="material-icons">arrow_forward_ios</i>
       </button>
-    </div>
-  </nav>
 
-  <main>
-    <div class="logo-central">
-      <img class="img__logo" src="./assets/atificialvshuman.png" alt="logo webdesign">
-    </div>
-    
+    </nav>
+
     <div class="video-background">
       <video autoplay muted loop="infinite"
         src="/videos/Network Connection Background Video, Plexus Dot Connection Background Loop _ Free Stock Footage (720p).mp4"></video>
-      
 
-        
-      
     </div>
-    
-  </main>
 
+    <script src="./scriptteste.js"></script>
 
-  <script src="./scriptteste.js"></script>
-
-
-</body>
+  </body>
 
 </html>
-
-
