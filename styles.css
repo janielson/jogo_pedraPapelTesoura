@@ -12,7 +12,13 @@ body {
     /* min-height: 100vh; */
     /* min-width: 100vw; */
     background-color: #080808;
+    height: calc(100vh - 72.95px);
+    z-index: 20;
 
+}
+
+.container {
+    padding: 0 4%;
 }
 
 .logo-central {
@@ -96,21 +102,23 @@ body {
     gap: 8px;
     list-style: none;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content:space-between;
 }
 
 @media screen and (min-width:400px) {
     #side_items {
-        display: flex;  
+        display: flex;
         gap: 8px;
         list-style: none;
         flex-direction: column;
     }
 }
+
 .side-item {
     border-radius: 8px;
     padding: 14px;
     cursor: pointer;
+    width: 48px;
 }
 
 .side-item.active {
@@ -144,12 +152,18 @@ body {
 
 #logout {
     border-top: 1px solid #e3e9f7;
-    padding: 12px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 14px;
+    cursor: pointer;
+    width: 48px;
+
+
 }
 
 #logout_btn {
     border: none;
-    padding: 12px;
+
     font-size: 14px;
     display: flex;
     gap: 20px;
@@ -177,9 +191,9 @@ body {
 @media screen and (min-width:400px) {
     #open_btn {
         display: block;
-        
+
     }
-    
+
 }
 
 #open_btn_icon {
@@ -191,6 +205,7 @@ body {
 }
 
 .item-description {
+    display: none;
     width: 0px;
     overflow: hidden;
     white-space: nowrap;
@@ -210,9 +225,7 @@ body {
 
 @media screen and (min-width: 400px) {
 
-#sidebar.open-sidebar .item-description {
-
-}
+    #sidebar.open-sidebar .item-description {}
 
 
 }
