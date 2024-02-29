@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Permanent+Marker&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    /* FONTES */
+    --font-one: font-family: "Roboto Condensed", sans-serif;
+}
 
 * {
     margin: 0;
@@ -12,9 +17,9 @@ body {
     /* min-height: 100vh; */
     /* min-width: 100vw; */
     background-color: #080808;
-    height: calc(100vh - 52px);
+    height: calc(100vh - 64px);
     z-index: 20;
-  
+
 
 }
 
@@ -69,36 +74,6 @@ body {
 
 }
 
-
-
-#sidebar_content {
-    padding: 12px;
-}
-
-#user {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 24px;
-}
-
-#user_avatar {
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-    border-radius: 20px;
-}
-
-#user_infos {
-    display: flex;
-    flex-direction: column;
-}
-
-#user_infos span:last-child {
-    color: #6b6b6b;
-    font-size: 12px;
-}
-
 #side_items {
     display: flex;
     gap: 8px;
@@ -123,36 +98,41 @@ body {
     cursor: pointer;
     width: 48px;
     height: 48px;
+    background-color: #00000046;
+
+    
 }
 
-.side-item.active {
-    background-color: #4f46e5;
+.side-item:active {
+    background-color: #01eaffb9;
+    box-shadow: 1px 1px 5px rgb(249, 248, 248);
 }
 
-.side-item:hover:not(.active),
-#logout_btn:hover {
-    background-color: #e3e9f7;
-}
 
 .side-item a {
     text-decoration: none;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     color: #0a0a0a;
-}
-
-.side-item.active a {
-    color: #e3e9f7;
-}
-
-.side-item a i {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 20px;
     height: 20px;
 }
+
+.slide-item__text-icon {
+    font-size: 12px;
+    font-weight: 600;
+    font-family: var(--font-one);
+    
+}
+
+.side-item:active .material-icons  {
+    color: #fff;
+
+
+}
+
 
 #logout {
     border-top: 1px solid #e3e9f7;
@@ -208,23 +188,6 @@ body {
     transform: rotate(180deg);
 }
 
-.item-description {
-    display: none;
-    width: 0px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    font-size: 14px;
-    transition: width .6s;
-    height: 0px;
-    font-family: "Arimo", sans-serif;
-}
-
-#sidebar.open-sidebar .item-description {
-    width: 150px;
-    height: auto;
-    display: none;
-}
 
 
 @media screen and (min-width: 400px) {
@@ -234,8 +197,19 @@ body {
 
 }
 
+/*---------------------------------*\
+    ESTILOS PARA IMAGENS E JOGO
+\*--------------------------------*/
 
-#sidebar.open-sidebar .side-item a {
-    justify-content: flex-start;
-    gap: 14px;
+.conteudo-principal {
+    display: flex;
+    justify-content: center;
+
+}
+
+.conteudo-principal__img-logo {
+    width: 290px;
+    object-fit: cover;
+    height: 100px;
+    filter: drop-shadow(4px 4px  8px rgb(255, 255, 255));
 }
