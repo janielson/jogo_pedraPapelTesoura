@@ -190,12 +190,14 @@ body {
 
 
 
-@media screen and (min-width: 400px) {
+/* @media screen and (min-width: 400px) {
 
-    #sidebar.open-sidebar .item-description {}
+    #sidebar.open-sidebar .item-description {
+
+    }
 
 
-}
+} */
 
 /*---------------------------------*\
     ESTILOS PARA IMAGENS E JOGO
@@ -212,4 +214,36 @@ body {
     object-fit: cover;
     height: 100px;
     filter: drop-shadow(4px 4px  8px rgb(255, 255, 255));
+    margin-left: 24px;
+}
+
+.img-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #00fbd9;
+    border-radius: 10px 20px;
+    box-shadow: 3px 3px 30px #f7f6f6;
+    padding: 8px ;
+
+
+}
+
+.img__title__artificial{
+    filter: drop-shadow(-2px 1px 4px #04f1f1);
+    width: 150px;
+    
+
+
+}
+
+
+.img__title__text{
+    text-align: center;
+    color: #ffffff;
+    font-family: var(--font-one);
+    text-shadow: 2px 2px 4px rgb(248, 248, 248);
+    
+
+
 }
