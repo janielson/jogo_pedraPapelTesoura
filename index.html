@@ -14,76 +14,26 @@
     <title>JOKENPÔ</title>
   </head>
 
-  <body>
-
-    <nav id="sidebar" class="sidebar-css  container">
-      <ul id="side_items">
-        <li class="side-item ">
-          <a href="#">
-            <i class="material-icons">sports_esports</i>
-           <p class="slide-item__text-icon">Jogar</p>
-          </a>
-        </li>
-
-        <li class="side-item ">
-          <a href="#">
-            <i class="material-icons">restart_alt</i>
-            <p class="slide-item__text-icon">Reset</p>
-         
-          </a>
-        </li>
-
-        <li class="side-item ">
-          <a href="#">
-            <i class="material-icons">table_view</i>
-            <p class="slide-item__text-icon">Tabela</p>
-          </a>
-        </li>
-
-     
-
-          <li class="side-item ">
-          <a href="#">
-            <i class="material-icons">
-              logout
-              </i>
-              <p class="slide-item__text-icon">logout</p>
-         
-          </a>
-        </li>
-      </ul>
-
-      <button id="open_btn">
-        <i id="open_btn_icon" class="material-icons">arrow_forward_ios</i>
-      </button>
-
-    </nav>
+<body>
     <div class="video-background">
       <video autoplay muted loop="infinite"
         src="/videos/Network Connection Background Video, Plexus Dot Connection Background Loop _ Free Stock Footage (720p).mp4"></video>
     </div>
 
-    <main class="container conteudo-principal ">
-        <section class="container-logo">
-          <img class="conteudo-principal__img-logo" src="./assets/atificialvshuman.png" alt="">
+    <div class="container-login">
+      <form action="" class="container-login__form">
+        <input type="text" class="container-login__nome" placeholder="Digite seu nome ou apelido">
+        <input type="text"  class="container-login__senha  " id="container-login__senha--espaco" placeholder="digite o numero de jogadas" >
+        <input type="submit" class="container-login__btn" value="Conectar">
 
-          
-        <figure class="img-title">
-          <img class="img__title__artificial" src="./assets/artificial.png" alt="imagem da inteligência">
-          <div class="img__title__paragraph">
-            <p class="img__title__text">Olá, seja bem-vindo!
-              Pronto para jogar Jokenpô?
-              Escolha Pedra, Papel ou Tesoura e boa sorte!</p>
-          </div>
-        </figure>
-            
-        </section>
+      </form>
 
 
+     </div>
+    
 
-
-    </main>
+  
     <script src="./scriptteste.js"></script>
-  </body>
+</body>
 
 </html>
