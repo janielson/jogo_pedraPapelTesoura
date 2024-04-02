@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Permanent+Marker&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
-:root{
+:root {
     /* FONTES */
     --font-one: font-family: "Roboto Condensed", sans-serif;
 }
@@ -37,28 +37,48 @@ body {
 
 }
 
-.container-login {
+
+.imgLogo-container{
     display: flex;
+    justify-content: center;
     align-items: center;
-    height: 100vh;
-}
-.container-login__form {
-    width:100%;
-    padding: 0 20px;
-}
-.container-login__form input {
-    width: 100%;
-    display: block;
-    margin-bottom: 10px;
-    height: 40px;
-    border-radius: 5px;
-    border: none;
-    outline: none;
-
-}
-
-#container-login__senha--espaco  {
-    margin-bottom: 48px;
+    height: 90px;
+    z-index: -1;
 }
 
 
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    background-color: #08080873;
+    position: relative;
+    top: 60px;
+    padding: 15px;
+    z-index: 1;
+    margin: 0 10px;
+    border-radius: 10px;
+    
+
+}
+
+
+.imgLogo{
+    position: relative;
+    width: 400px;
+    z-index: -2;
+    
+    
+    
+
+
+}
+
+.input{
+    
+}
+
+.label{
+
+}

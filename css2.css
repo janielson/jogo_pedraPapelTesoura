@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.input-wrapper {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% -50%);
+  }
+  
+  #meuInput {
+    border: none;
+    border-bottom: 1px solid black; /* Adicione uma borda inferior */
+    outline: none; /* Remova o contorno padrão do input */
+    width: 200px; /* Defina a largura do input conforme necessário */
+  }
+  
+  /* Estilize o placeholder quando não estiver focado */
+  #meuInput:placeholder-shown + label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.2s ease-out; /* Adicione uma transição suave */
+  }
+  
+  /* Estilize o input quando estiver focado ou tiver algum conteúdo */
+  #meuInput:focus,
+  #meuInput:not(:placeholder-shown) {
+    border-color: blue; /* Mude a cor da borda quando focado ou tiver conteúdo */
+  }
+  
+  /* Mude a cor do texto do placeholder */
+  #meuInput::placeholder {
+    color: transparent; /* Torne o texto do placeholder transparente */
+  }
+  
+  /* Estilize o texto do placeholder quando o input estiver focado */
+  #meuInput:focus::placeholder {
+    color: black; /* Mude a cor do texto do placeholder quando focado */
+  }
+  

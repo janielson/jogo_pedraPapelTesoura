@@ -1,4 +1,4 @@
-const inputText = document.querySelector('.container-login__senha');
+const inputText = document.getElementById('inputSenha');
 
 inputText.addEventListener('input', (event) => {
   const value = event.target.value;
@@ -6,3 +6,6 @@ inputText.addEventListener('input', (event) => {
   const newValue = value.replace(regex, ''); // remove caracteres não numéricos da string
   event.target.value = newValue; // atualiza o valor do campo com a string modificada
 });
+
+
+
