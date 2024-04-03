@@ -8,4 +8,3 @@ inputText.addEventListener('input', (event) => {
 });
 
 
-
