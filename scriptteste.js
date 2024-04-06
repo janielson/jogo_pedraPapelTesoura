@@ -1,4 +1,4 @@
-const inputText = document.getElementById('inputSenha');
+const inputText = document.getElementById('Input-condition');
 
 inputText.addEventListener('input', (event) => {
   const value = event.target.value;
