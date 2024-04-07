@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+background-color: black;
+}
+.container-imagem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.img-inteligencia {
+   height: 31.25rem;
+   width: 31.25rem;
+   filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1)); 
+}
