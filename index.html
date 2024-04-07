@@ -50,13 +50,20 @@
             </div>
             <div class="img__avatar">
               <img class="img-avatar__position" src="./assets/imgAvatar04.jpg" alt="">
-              <input class="checked__img__input" type="radio" name="list">
+              <input class="checked__img__input" type="radio" name="list" >
             </div>
            </section>
             <h3 class="ou-select">ou</h3>
            <div class="custom-file-input">
-            <input type="file" accept=".pdf, .doc, .docx">
-            <label for="upload">SELECIONE O SEU AVATAR</label>
+
+            <!-- O SEGREDO MINHOCA PARA CONSERTAR ISSO É COLOCANDO O INPUT DENTRO DO LABEL
+                 E DEPOIS VC DEFINE UM ID PARA O INPUT E ESSE NOME DE ID VC COLOCA NO LABEL COM ATRIBUTO FOR
+                DEPOIS VC COLOCA UM DISPLAY NONE NO INPUT
+             -->
+
+            <label for="upload">SELECIONE O SEU AVATAR
+              <input type="file" accept=".pdf, .doc, .docx" id="upload" style="display: none;">
+            </label>
           </div>
       
           <button>ENTRAR</button>
@@ -67,6 +74,7 @@
     </div>
 
   <script src="./scriptteste.js"></script>
+  <script src="./SeletorImagens.js" ></script>
 </body>
 
 </html>

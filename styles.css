@@ -65,8 +65,7 @@ body {
 }
 
 .form-container {
-  border: 1px solid #05f5f1;
-  background-color: #21212187;
+  background-color: #21212100;
   padding: 32px 24px;
   font-size: 14px;
   display: flex;
@@ -141,6 +140,7 @@ button:hover {
   margin-left: 8px;
   font-size: 16px;
   font-weight: 600;
+  color: #fbf8f8;
 
   
   
@@ -176,6 +176,7 @@ button:hover {
   position: relative;
   font-family: var(--font-cavat);
   text-shadow: 3px 3px 2px rgba(0, 0, 0, 1);
+  font-size: 2.0625rem;
   
   
   
@@ -192,28 +193,28 @@ button:hover {
 
 .saudacao-titulo::before {
   content: '';
-  width: 72%;
+  width: 16%;
   height: 1px;
   background-color: rgb(249, 245, 245);
   display: block;
   border-radius: 8px;
   position: absolute;
-  top: 9px;
-  left: -79%;
+  top: 30px;
+  left: -16%;
   right: -50%;
 
 
 }
 .saudacao-titulo::after {
   content: '';
-  width: 72%;
+  width: 16%;
   height: 1px;
   background-color: rgb(249, 245, 245);
   display: block;
   border-radius: 8px;
   position: absolute;
-  top: 9px;
-  left: 109%;
+  top: 86%;
+  left: 101%;
   right: -50%;
 
 
@@ -235,6 +236,7 @@ button:hover {
 .img__avatar{
 margin-left: 10px;
 cursor: pointer;
+position: relative;
 }
 
 .img__avatar:hover{
@@ -287,12 +289,12 @@ cursor: pointer;
 }
 
 .checked__img__input{
-  display: flex;
-  position: relative;
-  top: 1px;
-  right: -17px;
-  height: 17px;
-  width: 17px;
+ position: absolute;
+ top: 0;
+right: 1px;
+display: none;
+  
+  
   
 }
 
